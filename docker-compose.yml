@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  server:
+    container_name: thaireader-server
+    build: ./server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./server/data:/app/data
+      - ./server/uploads:/app/uploads
+    environment:
+      - PORT=3001
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - STORAGE_MODE=${STORAGE_MODE}
+      - OSS_REGION=${OSS_REGION}
+      - OSS_ACCESS_KEY_ID=${OSS_ACCESS_KEY_ID}
+      - OSS_ACCESS_KEY_SECRET=${OSS_ACCESS_KEY_SECRET}
+      - OSS_BUCKET=${OSS_BUCKET}
+    restart: always
+
+  client:
+    container_name: thaireader-client
+    build: ./client
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
+    restart: always
