@@ -38,7 +38,7 @@ class AliOssStorage {
       // Upload to OSS
       // file.path is the local path from Multer
       const result = await this.client.put(file.filename, file.path);
-      
+
       // Delete local file after upload
       try {
         fs.unlinkSync(file.path);
@@ -46,7 +46,12 @@ class AliOssStorage {
         console.error("Failed to delete temp file:", e);
       }
 
-      return result.url;
+      // Force HTTPS
+      let url = result.url;
+      if (url.startsWith('http://')) {
+        url = url.replace('http://', 'https://');
+      }
+      return url;
     } catch (error) {
       console.error("OSS Upload Error:", error);
       throw error;
