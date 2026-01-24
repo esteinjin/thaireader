@@ -4,6 +4,8 @@ services:
   server:
     container_name: thaireader-server
     build: ./server
+    env_file:
+      - .env
     ports:
       - "3006:3001"
     volumes:
