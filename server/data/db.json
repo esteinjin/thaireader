@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "id": "1769261499373",
+      "title": "拥抱孤独的自由",
+      "description": "这段视频探讨了独处的积极意义，认为那是一种终其一生追求的完全自由，鼓励人们听从内心而非他人的眼光。",
+      "coverUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/cover-1769261498219-51389583.png",
+      "audioUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/audio-1769261498233-616135559.wav",
+      "jsonUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/json-1769261498245-272563914.json",
+      "createdAt": "2026-01-24T13:31:39.373Z"
+    },
+    {
+      "id": "1769263862371",
+      "title": "Why Kind People are Dangerous",
+      "description": "An exploration of why the most dangerous and strong people are often the kind ones who choose peace over conflict.",
+      "coverUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/cover-1769263860958-807107609.png",
+      "audioUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/audio-1769263860969-756617097.wav",
+      "jsonUrl": "http://thaireader.oss-cn-hongkong.aliyuncs.com/json-1769263860998-996081822.json",
+      "createdAt": "2026-01-24T14:11:02.371Z"
+    }
+  ]
+}

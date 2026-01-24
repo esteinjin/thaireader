@@ -1,0 +1,708 @@
+{
+  "title": "拥抱孤独的自由",
+  "description": "这段视频探讨了独处的积极意义，认为那是一种终其一生追求的完全自由，鼓励人们听从内心而非他人的眼光。",
+  "sentences": [
+    {
+      "thai": "เลิกกลัวการอยู่คนเดียวเถอะครับ",
+      "chinese": "不要再害怕孤独了",
+      "startTime": 0,
+      "endTime": 2.11,
+      "words": [
+        {
+          "thai": "เลิก",
+          "chinese": "停止",
+          "startTime": 0,
+          "endTime": 0.35
+        },
+        {
+          "thai": "กลัว",
+          "chinese": "害怕",
+          "startTime": 0.35,
+          "endTime": 0.65
+        },
+        {
+          "thai": "การ",
+          "chinese": "事/行为",
+          "startTime": 0.65,
+          "endTime": 0.85
+        },
+        {
+          "thai": "อยู่",
+          "chinese": "待/在",
+          "startTime": 0.85,
+          "endTime": 1.05
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 1.05,
+          "endTime": 1.25
+        },
+        {
+          "thai": "เดียว",
+          "chinese": "单独",
+          "startTime": 1.25,
+          "endTime": 1.5
+        },
+        {
+          "thai": "เถอะ",
+          "chinese": "吧",
+          "startTime": 1.5,
+          "endTime": 1.75
+        },
+        {
+          "thai": "ครับ",
+          "chinese": "语气词(男)",
+          "startTime": 1.75,
+          "endTime": 2.11
+        }
+      ]
+    },
+    {
+      "thai": "เพราะจริงๆ แล้ว",
+      "chinese": "因为事实上",
+      "startTime": 2.11,
+      "endTime": 3.42,
+      "words": [
+        {
+          "thai": "เพราะ",
+          "chinese": "因为",
+          "startTime": 2.11,
+          "endTime": 2.5
+        },
+        {
+          "thai": "จริง",
+          "chinese": "真",
+          "startTime": 2.5,
+          "endTime": 2.75
+        },
+        {
+          "thai": "ๆ",
+          "chinese": "(重复)",
+          "startTime": 2.75,
+          "endTime": 3
+        },
+        {
+          "thai": "แล้ว",
+          "chinese": "已经/了",
+          "startTime": 3,
+          "endTime": 3.42
+        }
+      ]
+    },
+    {
+      "thai": "มันคืออิสระที่คุณตามหามาทั้งชีวิต",
+      "chinese": "那是你一生都在追求的自由",
+      "startTime": 3.42,
+      "endTime": 7.64,
+      "words": [
+        {
+          "thai": "มัน",
+          "chinese": "它",
+          "startTime": 3.42,
+          "endTime": 3.8
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 3.8,
+          "endTime": 4.3
+        },
+        {
+          "thai": "อิสระ",
+          "chinese": "自由",
+          "startTime": 4.3,
+          "endTime": 5.2
+        },
+        {
+          "thai": "ที่",
+          "chinese": "那/哪",
+          "startTime": 5.2,
+          "endTime": 5.5
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 5.5,
+          "endTime": 5.85
+        },
+        {
+          "thai": "ตาม",
+          "chinese": "跟随",
+          "startTime": 5.85,
+          "endTime": 6.25
+        },
+        {
+          "thai": "หา",
+          "chinese": "找",
+          "startTime": 6.25,
+          "endTime": 6.65
+        },
+        {
+          "thai": "มา",
+          "chinese": "来",
+          "startTime": 6.65,
+          "endTime": 6.95
+        },
+        {
+          "thai": "ทั้ง",
+          "chinese": "整个",
+          "startTime": 6.95,
+          "endTime": 7.3
+        },
+        {
+          "thai": "ชีวิต",
+          "chinese": "生命/一生",
+          "startTime": 7.3,
+          "endTime": 7.64
+        }
+      ]
+    },
+    {
+      "thai": "ไม่ต้องรอใคร ไม่ต้องง้อใคร",
+      "chinese": "不用等谁，不用求谁",
+      "startTime": 7.64,
+      "endTime": 9.38,
+      "words": [
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 7.64,
+          "endTime": 7.85
+        },
+        {
+          "thai": "ต้อง",
+          "chinese": "需要/必须",
+          "startTime": 7.85,
+          "endTime": 8.15
+        },
+        {
+          "thai": "รอ",
+          "chinese": "等",
+          "startTime": 8.15,
+          "endTime": 8.4
+        },
+        {
+          "thai": "ใคร",
+          "chinese": "谁",
+          "startTime": 8.4,
+          "endTime": 8.6
+        },
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 8.6,
+          "endTime": 8.8
+        },
+        {
+          "thai": "ต้อง",
+          "chinese": "需要/必须",
+          "startTime": 8.8,
+          "endTime": 9
+        },
+        {
+          "thai": "ง้อ",
+          "chinese": "讨好/哀求",
+          "startTime": 9,
+          "endTime": 9.2
+        },
+        {
+          "thai": "ใคร",
+          "chinese": "谁",
+          "startTime": 9.2,
+          "endTime": 9.38
+        }
+      ]
+    },
+    {
+      "thai": "อยากไปไหนก็ไป",
+      "chinese": "想去哪就去哪",
+      "startTime": 9.38,
+      "endTime": 10.96,
+      "words": [
+        {
+          "thai": "อยาก",
+          "chinese": "想",
+          "startTime": 9.38,
+          "endTime": 9.75
+        },
+        {
+          "thai": "ไป",
+          "chinese": "去",
+          "startTime": 9.75,
+          "endTime": 10.05
+        },
+        {
+          "thai": "ไหน",
+          "chinese": "哪里",
+          "startTime": 10.05,
+          "endTime": 10.45
+        },
+        {
+          "thai": "ก็",
+          "chinese": "就",
+          "startTime": 10.45,
+          "endTime": 10.7
+        },
+        {
+          "thai": "ไป",
+          "chinese": "去",
+          "startTime": 10.7,
+          "endTime": 10.96
+        }
+      ]
+    },
+    {
+      "thai": "อยากทำอะไรก็ทำ",
+      "chinese": "想做什么就做什么",
+      "startTime": 10.96,
+      "endTime": 12.04,
+      "words": [
+        {
+          "thai": "อยาก",
+          "chinese": "想",
+          "startTime": 10.96,
+          "endTime": 11.2
+        },
+        {
+          "thai": "ทำ",
+          "chinese": "做",
+          "startTime": 11.2,
+          "endTime": 11.45
+        },
+        {
+          "thai": "อะไร",
+          "chinese": "什么",
+          "startTime": 11.45,
+          "endTime": 11.75
+        },
+        {
+          "thai": "ก็",
+          "chinese": "就",
+          "startTime": 11.75,
+          "endTime": 11.9
+        },
+        {
+          "thai": "ทำ",
+          "chinese": "做",
+          "startTime": 11.9,
+          "endTime": 12.04
+        }
+      ]
+    },
+    {
+      "thai": "ชีวิตเป็นของเรา 100%",
+      "chinese": "生活100%属于我们自己",
+      "startTime": 12.04,
+      "endTime": 13.56,
+      "words": [
+        {
+          "thai": "ชีวิต",
+          "chinese": "生活",
+          "startTime": 12.04,
+          "endTime": 12.45
+        },
+        {
+          "thai": "เป็น",
+          "chinese": "是",
+          "startTime": 12.45,
+          "endTime": 12.7
+        },
+        {
+          "thai": "ของ",
+          "chinese": "属于",
+          "startTime": 12.7,
+          "endTime": 12.95
+        },
+        {
+          "thai": "เรา",
+          "chinese": "我们",
+          "startTime": 12.95,
+          "endTime": 13.15
+        },
+        {
+          "thai": "100",
+          "chinese": "100",
+          "startTime": 13.15,
+          "endTime": 13.35
+        },
+        {
+          "thai": "%",
+          "chinese": "%",
+          "startTime": 13.35,
+          "endTime": 13.56
+        }
+      ]
+    },
+    {
+      "thai": "มันโคตรมีความสุขเลยนะ",
+      "chinese": "真的超级幸福啊",
+      "startTime": 13.56,
+      "endTime": 15.68,
+      "words": [
+        {
+          "thai": "มัน",
+          "chinese": "它",
+          "startTime": 13.56,
+          "endTime": 13.85
+        },
+        {
+          "thai": "โคตร",
+          "chinese": "极其/超级",
+          "startTime": 13.85,
+          "endTime": 14.25
+        },
+        {
+          "thai": "มี",
+          "chinese": "有",
+          "startTime": 14.25,
+          "endTime": 14.5
+        },
+        {
+          "thai": "ความ",
+          "chinese": "前缀",
+          "startTime": 14.5,
+          "endTime": 14.75
+        },
+        {
+          "thai": "สุข",
+          "chinese": "快乐/幸福",
+          "startTime": 14.75,
+          "endTime": 15.15
+        },
+        {
+          "thai": "เลย",
+          "chinese": "真的",
+          "startTime": 15.15,
+          "endTime": 15.45
+        },
+        {
+          "thai": "นะ",
+          "chinese": "语气词",
+          "startTime": 15.45,
+          "endTime": 15.68
+        }
+      ]
+    },
+    {
+      "thai": "เรามัวแต่แคร์ว่าคนอื่นจะมองยังไง",
+      "chinese": "我们太在意别人的眼光",
+      "startTime": 15.68,
+      "endTime": 18.25,
+      "words": [
+        {
+          "thai": "เรา",
+          "chinese": "我们",
+          "startTime": 15.68,
+          "endTime": 15.95
+        },
+        {
+          "thai": "มัว",
+          "chinese": "纠结",
+          "startTime": 15.95,
+          "endTime": 16.2
+        },
+        {
+          "thai": "แต่",
+          "chinese": "只",
+          "startTime": 16.2,
+          "endTime": 16.4
+        },
+        {
+          "thai": "แคร์",
+          "chinese": "在意",
+          "startTime": 16.4,
+          "endTime": 16.7
+        },
+        {
+          "thai": "ว่า",
+          "chinese": "认为",
+          "startTime": 16.7,
+          "endTime": 16.9
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 16.9,
+          "endTime": 17.15
+        },
+        {
+          "thai": "อื่น",
+          "chinese": "别的",
+          "startTime": 17.15,
+          "endTime": 17.35
+        },
+        {
+          "thai": "จะ",
+          "chinese": "会",
+          "startTime": 17.35,
+          "endTime": 17.55
+        },
+        {
+          "thai": "มอง",
+          "chinese": "看",
+          "startTime": 17.55,
+          "endTime": 17.75
+        },
+        {
+          "thai": "ยัง",
+          "chinese": "怎么",
+          "startTime": 17.75,
+          "endTime": 17.95
+        },
+        {
+          "thai": "ไง",
+          "chinese": "语气词",
+          "startTime": 17.95,
+          "endTime": 18.25
+        }
+      ]
+    },
+    {
+      "thai": "จนลืมถามตัวเองว่า แล้วเรามีความสุขมั้ย",
+      "chinese": "直到忘记问自己，我们快乐吗？",
+      "startTime": 18.25,
+      "endTime": 23.47,
+      "words": [
+        {
+          "thai": "จน",
+          "chinese": "直到",
+          "startTime": 18.25,
+          "endTime": 18.55
+        },
+        {
+          "thai": "ลืม",
+          "chinese": "忘记",
+          "startTime": 18.55,
+          "endTime": 18.85
+        },
+        {
+          "thai": "ถาม",
+          "chinese": "问",
+          "startTime": 18.85,
+          "endTime": 19.15
+        },
+        {
+          "thai": "ตัว",
+          "chinese": "自己",
+          "startTime": 19.15,
+          "endTime": 19.4
+        },
+        {
+          "thai": "เอง",
+          "chinese": "加强语气",
+          "startTime": 19.4,
+          "endTime": 19.7
+        },
+        {
+          "thai": "ว่า",
+          "chinese": "说",
+          "startTime": 19.7,
+          "endTime": 20
+        },
+        {
+          "thai": "แล้ว",
+          "chinese": "那",
+          "startTime": 20,
+          "endTime": 20.6
+        },
+        {
+          "thai": "เรา",
+          "chinese": "我们",
+          "startTime": 20.6,
+          "endTime": 21.2
+        },
+        {
+          "thai": "มี",
+          "chinese": "有",
+          "startTime": 21.4,
+          "endTime": 21.8
+        },
+        {
+          "thai": "ความ",
+          "chinese": "前缀",
+          "startTime": 21.8,
+          "endTime": 22.2
+        },
+        {
+          "thai": "สุข",
+          "chinese": "幸福",
+          "startTime": 22.2,
+          "endTime": 22.8
+        },
+        {
+          "thai": "มั้ย",
+          "chinese": "吗",
+          "startTime": 22.8,
+          "endTime": 23.47
+        }
+      ]
+    },
+    {
+      "thai": "ลองปิดโทรศัพท์แล้วอยู่กับตัวเองเงียบๆ สักพัก",
+      "chinese": "试着关掉手机，静静地和自己待一会儿",
+      "startTime": 23.47,
+      "endTime": 27.27,
+      "words": [
+        {
+          "thai": "ลอง",
+          "chinese": "尝试",
+          "startTime": 23.47,
+          "endTime": 23.85
+        },
+        {
+          "thai": "ปิด",
+          "chinese": "关闭",
+          "startTime": 23.85,
+          "endTime": 24.2
+        },
+        {
+          "thai": "โทรศัพท์",
+          "chinese": "电话",
+          "startTime": 24.2,
+          "endTime": 24.95
+        },
+        {
+          "thai": "แล้ว",
+          "chinese": "然后",
+          "startTime": 24.95,
+          "endTime": 25.25
+        },
+        {
+          "thai": "อยู่",
+          "chinese": "待",
+          "startTime": 25.25,
+          "endTime": 25.55
+        },
+        {
+          "thai": "กับ",
+          "chinese": "和",
+          "startTime": 25.55,
+          "endTime": 25.75
+        },
+        {
+          "thai": "ตัว",
+          "chinese": "自己",
+          "startTime": 25.75,
+          "endTime": 25.95
+        },
+        {
+          "thai": "เอง",
+          "chinese": "加强语气",
+          "startTime": 25.95,
+          "endTime": 26.25
+        },
+        {
+          "thai": "เงียบ",
+          "chinese": "安静",
+          "startTime": 26.25,
+          "endTime": 26.65
+        },
+        {
+          "thai": "ๆ",
+          "chinese": "重复符号",
+          "startTime": 26.65,
+          "endTime": 26.9
+        },
+        {
+          "thai": "สัก",
+          "chinese": "一些",
+          "startTime": 26.9,
+          "endTime": 27.1
+        },
+        {
+          "thai": "พัก",
+          "chinese": "一会儿",
+          "startTime": 27.1,
+          "endTime": 27.27
+        }
+      ]
+    },
+    {
+      "thai": "คุณจะได้ยินเสียงหัวใจตัวเองชัดขึ้นเยอะเลย",
+      "chinese": "你会更清晰地听到自己的心声",
+      "startTime": 27.27,
+      "endTime": 31.6,
+      "words": [
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 27.27,
+          "endTime": 27.6
+        },
+        {
+          "thai": "จะ",
+          "chinese": "会",
+          "startTime": 27.6,
+          "endTime": 27.85
+        },
+        {
+          "thai": "ได้",
+          "chinese": "得到",
+          "startTime": 27.85,
+          "endTime": 28.1
+        },
+        {
+          "thai": "ยิน",
+          "chinese": "听到",
+          "startTime": 28.1,
+          "endTime": 28.4
+        },
+        {
+          "thai": "เสียง",
+          "chinese": "声音",
+          "startTime": 28.4,
+          "endTime": 28.7
+        },
+        {
+          "thai": "หัว",
+          "chinese": "头",
+          "startTime": 28.7,
+          "endTime": 28.95
+        },
+        {
+          "thai": "ใจ",
+          "chinese": "心",
+          "startTime": 28.95,
+          "endTime": 29.2
+        },
+        {
+          "thai": "ตัว",
+          "chinese": "自己",
+          "startTime": 29.2,
+          "endTime": 29.45
+        },
+        {
+          "thai": "เอง",
+          "chinese": "加强语气",
+          "startTime": 29.45,
+          "endTime": 29.8
+        },
+        {
+          "thai": "ชัด",
+          "chinese": "清晰",
+          "startTime": 29.8,
+          "endTime": 30.2
+        },
+        {
+          "thai": "ขึ้น",
+          "chinese": "起来",
+          "startTime": 30.2,
+          "endTime": 30.6
+        },
+        {
+          "thai": "เยอะ",
+          "chinese": "很多",
+          "startTime": 30.6,
+          "endTime": 31
+        },
+        {
+          "thai": "เลย",
+          "chinese": "真的",
+          "startTime": 31,
+          "endTime": 31.6
+        }
+      ]
+    }
+  ]
+}
