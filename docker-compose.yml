@@ -5,7 +5,7 @@ services:
     container_name: thaireader-server
     build: ./server
     ports:
-      - "3001:3001"
+      - "3005:3001"
     volumes:
       - ./server/data:/app/data
       - ./server/uploads:/app/uploads
