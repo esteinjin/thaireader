@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰语学习导航 - 开启您的泰语之旅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .card-bg {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=2070&auto=format&fit=crop"
+            alt="泰国风景" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold hero-text-shadow tracking-wider">暹罗之门</h1>
+            <p class="mt-4 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto hero-text-shadow">
+                您的专属泰语学习导航站，汇集实用工具与资源，助您轻松开启、深入探索泰语世界。
+            </p>
+        </header>
+
+        <!-- Websites Grid -->
+        <main class="w-full max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Card 1: Main Site -->
+                <a href="https://engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-indigo-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v11.494m-5.747-8.247l11.494 0M4.253 12l15.494 0M12 4.253c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语学习主站</h3>
+                        <p class="text-gray-300 text-sm flex-grow">探索泰语的奥秘，分享学习心得与文化见闻。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">进入探索</span>
+                    </div>
+                </a>
+
+                <!-- Card 2: Thai App -->
+                <a href="https://thaiapp.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-teal-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语APP</h3>
+                        <p class="text-gray-300 text-sm flex-grow">移动学习，随时随地，让泰语学习融入您的生活。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">立即体验</span>
+                    </div>
+                </a>
+
+                <!-- Card 3: Video Player -->
+                <a href="https://player.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-red-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语视频播放器</h3>
+                        <p class="text-gray-300 text-sm flex-grow">沉浸式视听学习，通过真实场景提升听说能力。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">开始观看</span>
+                    </div>
+                </a>
+
+                <!-- Card 4: Thai Basic -->
+                <a href="https://thaibasic.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-sky-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语基础入门</h3>
+                        <p class="text-gray-300 text-sm flex-grow">为零基础学习者设计，系统化教学助您轻松迈出第一步。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">从零开始</span>
+                    </div>
+                </a>
+
+                <!-- Card 5: Thai Type Master -->
+                <a href="https://thaitype.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-purple-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语打字大师</h3>
+                        <p class="text-gray-300 text-sm flex-grow">通过趣味打字练习，快速掌握泰语键盘输入技巧。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">开始练习</span>
+                    </div>
+                </a>
+
+                <!-- Card 6: ThaiTok -->
+                <a href="https://thaitok.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-orange-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语短视频学习</h3>
+                        <p class="text-gray-300 text-sm flex-grow">通过短视频片段学习地道泰语，轻松掌握日常表达。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">开始学习</span>
+                    </div>
+                </a>
+
+                <!-- Card 7: StoryWeaver -->
+                <a href="https://story.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-pink-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语故事编织</h3>
+                        <p class="text-gray-300 text-sm flex-grow">通过互动式故事学习泰语，在情境中提升语言能力。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">开始阅读</span>
+                    </div>
+                </a>
+
+                <!-- Card 8: Thai Reader -->
+                <a href="https://thairead.engapp.top" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-blue-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">泰语沉浸式阅读</h3>
+                        <p class="text-gray-300 text-sm flex-grow">精选泰语视频课程，沉浸式跟读体验，助您深入理解。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">开始阅读</span>
+                    </div>
+                </a>
+
+                <!-- Card 9: English Corner -->
+                <a href="https://engapp.top/english/" target="_blank" class="block card-hover-effect">
+                    <div
+                        class="h-full rounded-2xl overflow-hidden shadow-lg card-bg p-6 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-500 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M12 21a9.004 9.004 0 008.816-11.993l-7-4.5a9.004 9.004 0 00-8.816 11.993l7 4.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">English Corner</h3>
+                        <p class="text-gray-300 text-sm flex-grow">为国际友人打造，使用英语作为媒介学习泰语。</p>
+                        <span
+                            class="mt-4 inline-block bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-full">Learn
+                            in English</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>&copy; 2024 泰语学习导航. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
