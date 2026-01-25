@@ -271,6 +271,7 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
                     for (const word of sentence.words) {
                         totalWords++;
                         // FORCE GENERATE: Ignore existing audioUrl
+                        console.log(`Checking word: ${word.thai}, current audioUrl: ${word.audioUrl}`);
                         if (word.thai) {
                             attemptedWords++;
                             try {
