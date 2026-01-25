@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { login, uploadCourse, getCourses, deleteCourse, updateCourse } from '../lib/api';
+import { login, uploadCourse, getCourses, deleteCourse, updateCourse, generateAudio } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
-import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X } from 'lucide-react';
+import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X, Volume2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -11,6 +11,7 @@ export default function Admin() {
     const [loading, setLoading] = useState(false);
     const [activeTab, setActiveTab] = useState('upload'); // 'upload' | 'list'
     const [editingCourse, setEditingCourse] = useState(null); // Course object being edited
+    const [generatingId, setGeneratingId] = useState(null);
 
     // List State
     const [courses, setCourses] = useState([]);
@@ -80,6 +81,20 @@ export default function Admin() {
             loadCourses(page);
         } catch (err) {
             alert('删除失败: ' + err.message);
+        }
+    };
+
+    const handleGenerateAudio = async (id) => {
+        if (generatingId) return;
+        if (!window.confirm('确定要生成所有单词的语音吗？这可能需要一些时间。')) return;
+        setGeneratingId(id);
+        try {
+            const res = await generateAudio(id);
+            alert(`生成成功！共生成 ${res.updatedCount} 个单词语音。`);
+        } catch (err) {
+            alert('生成失败: ' + err.message);
+        } finally {
+            setGeneratingId(null);
         }
     };
 
@@ -300,7 +315,15 @@ export default function Admin() {
                                             <p className="text-xs text-slate-500 truncate mt-1">{new Date(course.createdAt).toLocaleString('zh-CN')}</p>
                                         </div>
 
-                                        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div className="flex items-center gap-2">
+                                            <button
+                                                onClick={() => handleGenerateAudio(course.id)}
+                                                title="生成单词语音"
+                                                disabled={generatingId === course.id}
+                                                className="p-2 bg-white/5 rounded-lg hover:bg-green-500 hover:text-white transition-colors text-slate-400 disabled:opacity-50"
+                                            >
+                                                {generatingId === course.id ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Volume2 size={18} />}
+                                            </button>
                                             <button
                                                 onClick={() => handleEdit(course)}
                                                 title="重新上传/更新"

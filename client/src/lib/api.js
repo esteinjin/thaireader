@@ -16,3 +16,4 @@ export const deleteCourse = (id) => api.delete(`/admin/courses/${id}`).then(res 
 export const updateCourse = (id, formData) => api.put(`/admin/courses/${id}`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
 }).then(res => res.data);
+export const generateAudio = (id) => api.post(`/admin/courses/${id}/generate-audio`).then(res => res.data);

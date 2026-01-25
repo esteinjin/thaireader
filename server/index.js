@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import { storage } from './services/storage.js';
 import { db } from './services/db.js';
 import { fileURLToPath } from 'url';
+import axios from 'axios';
 
 // Load env
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -195,6 +196,131 @@ app.get('/api/courses/:id', async (req, res) => {
     const course = db.data.courses.find(c => c.id === req.params.id);
     if (!course) return res.status(404).json({ message: 'Course not found' });
     res.json(course);
+});
+
+// Helper: Generate Audio via SoundOfText
+async function generateSoundOfTextAudio(text) {
+    try {
+        // 1. Create Sound
+        const createRes = await axios.post('https://api.soundoftext.com/sounds', {
+            engine: 'Google',
+            data: {
+                text: text,
+                voice: 'th-TH'
+            }
+        });
+
+        if (!createRes.data.success) throw new Error('Failed to create sound');
+        const soundId = createRes.data.id;
+
+        // 2. Poll for status
+        let attempts = 0;
+        while (attempts < 10) {
+            await new Promise(r => setTimeout(r, 1000));
+            const statusRes = await axios.get(`https://api.soundoftext.com/sounds/${soundId}`);
+            if (statusRes.data.status === 'Done') {
+                return statusRes.data.location;
+            } else if (statusRes.data.status === 'Error') {
+                throw new Error('Sound generation error');
+            }
+            attempts++;
+        }
+        throw new Error('Timeout waiting for sound generation');
+    } catch (err) {
+        console.error(`Error generating audio for ${text}:`, err.message);
+        return null;
+    }
+}
+
+// Generate Audio for Course Words
+app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await db.read();
+        const course = db.data.courses.find(c => c.id === id);
+        if (!course) return res.status(404).json({ message: 'Course not found' });
+
+        // Read JSON
+        let jsonContent;
+        if (course.jsonUrl.startsWith('http')) {
+            const response = await axios.get(course.jsonUrl);
+            jsonContent = response.data;
+        } else {
+            // Local file
+            // course.jsonUrl is like /uploads/file.json
+            // We need to map it to absolute path
+            const relativePath = course.jsonUrl.replace('/uploads', '');
+            const localPath = path.join(UPLOADS_DIR, relativePath);
+            if (fs.existsSync(localPath)) {
+                jsonContent = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+            } else {
+                return res.status(404).json({ message: 'JSON file not found' });
+            }
+        }
+
+        let updatedCount = 0;
+
+        // Iterate sentences and words
+        if (jsonContent.sentences) {
+            for (const sentence of jsonContent.sentences) {
+                if (sentence.words) {
+                    for (const word of sentence.words) {
+                        if (!word.audioUrl && word.thai) {
+                            console.log(`Generating audio for: ${word.thai}`);
+                            const audioUrl = await generateSoundOfTextAudio(word.thai);
+                            if (audioUrl) {
+                                // Download to temp file
+                                const response = await axios.get(audioUrl, { responseType: 'stream' });
+                                const tempFileName = `word-${Date.now()}-${Math.random().toString(36).substring(7)}.mp3`;
+                                const tempFilePath = path.join(UPLOADS_DIR, tempFileName);
+                                const writer = fs.createWriteStream(tempFilePath);
+                                response.data.pipe(writer);
+
+                                await new Promise((resolve, reject) => {
+                                    writer.on('finish', resolve);
+                                    writer.on('error', reject);
+                                });
+
+                                // Upload to OSS
+                                const savedUrl = await storage.save({
+                                    filename: tempFileName,
+                                    path: tempFilePath,
+                                    originalname: tempFileName
+                                });
+
+                                word.audioUrl = savedUrl;
+                                updatedCount++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (updatedCount > 0) {
+            // Save updated JSON
+            const tempJsonName = `course-${id}-${Date.now()}.json`;
+            const tempJsonPath = path.join(UPLOADS_DIR, tempJsonName);
+            fs.writeFileSync(tempJsonPath, JSON.stringify(jsonContent, null, 2));
+
+            const newJsonUrl = await storage.save({
+                filename: tempJsonName,
+                path: tempJsonPath,
+                originalname: tempJsonName
+            });
+
+            // Update course record
+            course.jsonUrl = newJsonUrl;
+            course.updatedAt = new Date().toISOString();
+            await db.write();
+        }
+
+        res.json({ success: true, updatedCount });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Generation failed', error: error.message });
+    }
 });
 
 app.listen(PORT, () => {
