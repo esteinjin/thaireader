@@ -37,6 +37,26 @@ export default function CoursePlayer() {
     const [currentReviewWordIndex, setCurrentReviewWordIndex] = useState(-1);
     const reviewListRef = useRef(null);
 
+    // Playback Rate State
+    const [playbackRate, setPlaybackRate] = useState(1.0);
+
+    // Update audio playback rate
+    useEffect(() => {
+        if (audioRef.current) {
+            try {
+                audioRef.current.playbackRate = playbackRate;
+            } catch (e) {
+                console.warn("Failed to set playback rate:", e);
+            }
+        }
+    }, [playbackRate]);
+
+    const cyclePlaybackRate = () => {
+        const rates = [1.0, 1.25, 1.5, 0.75];
+        const nextRate = rates[(rates.indexOf(playbackRate) + 1) % rates.length];
+        setPlaybackRate(nextRate);
+    };
+
     useEffect(() => {
         getCourse(id).then(async (data) => {
             setCourse(data);
@@ -221,6 +241,14 @@ export default function CoursePlayer() {
                     </div>
 
                     <div className="flex items-center gap-2">
+                        {/* Speed Toggle */}
+                        <button
+                            onClick={cyclePlaybackRate}
+                            className="px-2 py-1.5 rounded-full text-[10px] font-bold bg-white/10 text-slate-300 border border-white/5 hover:bg-white/20 transition-all"
+                        >
+                            {playbackRate}x
+                        </button>
+
                         {/* Read Mode Toggle */}
                         <button
                             onClick={toggleReadMode}
