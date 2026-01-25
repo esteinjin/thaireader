@@ -137,13 +137,21 @@ app.get('/api/courses', async (req, res) => {
         try {
             let jsonContent;
             if (course.jsonUrl.startsWith('http')) {
-                // For list view, maybe we shouldn't fetch remote JSON for performance?
-                // But user wants status. Let's try to read local file if possible, or skip if remote.
-                // Actually, since we are in admin, we can try to read local file if path matches
                 const fileName = path.basename(course.jsonUrl);
                 const localPath = path.join(UPLOADS_DIR, fileName);
+
                 if (fs.existsSync(localPath)) {
                     jsonContent = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+                } else {
+                    // Local cache missing, download from OSS
+                    try {
+                        const resp = await axios.get(course.jsonUrl);
+                        jsonContent = resp.data;
+                        // Save to local for next time
+                        fs.writeFileSync(localPath, JSON.stringify(jsonContent, null, 2));
+                    } catch (err) {
+                        console.error(`Failed to download JSON for stats: ${course.jsonUrl}`, err.message);
+                    }
                 }
             } else {
                 const fileName = path.basename(course.jsonUrl);
