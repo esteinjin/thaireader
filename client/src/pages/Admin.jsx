@@ -238,21 +238,22 @@ export default function Admin() {
                                         >
                                             <option value="directory">泰语名录</option>
                                             <option value="novel">泰语小说</option>
+                                            <option value="drama">泰剧对白</option>
                                         </select>
                                     </div>
 
-                                    {category === 'novel' && (
+                                    {(category === 'novel' || category === 'drama') && (
                                         <div className="group animate-fade-in">
                                             <label className="flex items-center gap-2 text-slate-300 mb-2 text-sm font-medium group-hover:text-blue-400 transition-colors">
                                                 <BookOpen size={16} />
-                                                小说系列名称
+                                                {category === 'novel' ? '小说系列名称' : '剧集名称'}
                                             </label>
                                             <input
                                                 type="text"
                                                 name="series"
                                                 value={series}
                                                 onChange={(e) => setSeries(e.target.value)}
-                                                placeholder="例如：诚实咖啡"
+                                                placeholder={category === 'novel' ? "例如：诚实咖啡" : "例如：天生一对"}
                                                 required={category === 'novel'}
                                                 className="block w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500 transition-colors placeholder-slate-500"
                                             />
@@ -444,7 +445,7 @@ export default function Admin() {
                         </div>
                     )}
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

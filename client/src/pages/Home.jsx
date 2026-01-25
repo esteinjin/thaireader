@@ -71,8 +71,8 @@ export default function Home() {
                         <button
                             onClick={() => setActiveTab('directory')}
                             className={`pb-3 px-4 text-sm font-bold transition-all relative ${activeTab === 'directory'
-                                    ? 'text-blue-400'
-                                    : 'text-slate-400 hover:text-white'
+                                ? 'text-blue-400'
+                                : 'text-slate-400 hover:text-white'
                                 }`}
                         >
                             泰语名录
@@ -83,8 +83,8 @@ export default function Home() {
                         <button
                             onClick={() => setActiveTab('novel')}
                             className={`pb-3 px-4 text-sm font-bold transition-all relative ${activeTab === 'novel'
-                                    ? 'text-purple-400'
-                                    : 'text-slate-400 hover:text-white'
+                                ? 'text-purple-400'
+                                : 'text-slate-400 hover:text-white'
                                 }`}
                         >
                             泰语小说
@@ -92,11 +92,23 @@ export default function Home() {
                                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400 rounded-t-full" />
                             )}
                         </button>
+                        <button
+                            onClick={() => setActiveTab('drama')}
+                            className={`pb-3 px-4 text-sm font-bold transition-all relative ${activeTab === 'drama'
+                                ? 'text-pink-400'
+                                : 'text-slate-400 hover:text-white'
+                                }`}
+                        >
+                            泰剧对白
+                            {activeTab === 'drama' && (
+                                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-400 rounded-t-full" />
+                            )}
+                        </button>
                     </div>
                 </header>
 
-                {/* Directory View */}
-                {activeTab === 'directory' && (
+                {/* Directory & Drama View */}
+                {(activeTab === 'directory' || activeTab === 'drama') && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {courses.map(course => (
                             <Link key={course.id} to={`/course/${course.id}`} className="group relative block bg-slate-900 rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
@@ -192,8 +204,8 @@ export default function Home() {
                     </div>
                 )}
 
-                {/* Load More (Only for Directory, as Novel fetches all for now) */}
-                {activeTab === 'directory' && courses.length > 0 && hasMore && (
+                {/* Load More (Only for Directory/Drama, as Novel fetches all for now) */}
+                {(activeTab === 'directory' || activeTab === 'drama') && courses.length > 0 && hasMore && (
                     <div className="mt-12 text-center">
                         <button
                             onClick={handleLoadMore}
@@ -205,7 +217,7 @@ export default function Home() {
                     </div>
                 )}
 
-                {courses.length === 0 && !loading && activeTab === 'directory' && (
+                {courses.length === 0 && !loading && (activeTab === 'directory' || activeTab === 'drama') && (
                     <div className="flex flex-col items-center justify-center py-32 text-slate-500">
                         <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mb-4 ring-1 ring-white/10">
                             <BookOpen size={24} className="opacity-50" />
