@@ -236,13 +236,14 @@ export default function CoursePlayer() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                        {/* Speed Toggle */}
+                        {/* Speed Toggle - Temporarily disabled for debugging
                         <button
                             onClick={cyclePlaybackRate}
                             className="px-2 py-1.5 rounded-full text-[10px] font-bold bg-white/10 text-slate-300 border border-white/5 hover:bg-white/20 transition-all"
                         >
                             {playbackRate}x
                         </button>
+                        */}
 
                         {/* Read Mode Toggle */}
                         <button
