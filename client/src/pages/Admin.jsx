@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { login, uploadCourse, getCourses, deleteCourse, updateCourse, generateAudio } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
-import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X, Volume2 } from 'lucide-react';
+import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X, Volume2, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -12,6 +12,10 @@ export default function Admin() {
     const [activeTab, setActiveTab] = useState('upload'); // 'upload' | 'list'
     const [editingCourse, setEditingCourse] = useState(null); // Course object being edited
     const [generatingId, setGeneratingId] = useState(null);
+
+    // Form State
+    const [category, setCategory] = useState('directory');
+    const [series, setSeries] = useState('');
 
     // List State
     const [courses, setCourses] = useState([]);
@@ -64,6 +68,8 @@ export default function Admin() {
                 alert('上传成功！');
             }
             e.target.reset();
+            setCategory('directory');
+            setSeries('');
             setActiveTab('list');
             loadCourses(1);
         } catch (err) {
@@ -101,11 +107,15 @@ export default function Admin() {
 
     const handleEdit = (course) => {
         setEditingCourse(course);
+        setCategory(course.category || 'directory');
+        setSeries(course.series || '');
         setActiveTab('upload');
     };
 
     const cancelEdit = () => {
         setEditingCourse(null);
+        setCategory('directory');
+        setSeries('');
         setActiveTab('list');
     };
 
@@ -213,6 +223,43 @@ export default function Admin() {
                             </div>
 
                             <form onSubmit={handleUpload} className="space-y-5">
+                                {/* Category Selection */}
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="group">
+                                        <label className="flex items-center gap-2 text-slate-300 mb-2 text-sm font-medium group-hover:text-blue-400 transition-colors">
+                                            <List size={16} />
+                                            内容分类
+                                        </label>
+                                        <select
+                                            name="category"
+                                            value={category}
+                                            onChange={(e) => setCategory(e.target.value)}
+                                            className="block w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                                        >
+                                            <option value="directory">泰语名录</option>
+                                            <option value="novel">泰语小说</option>
+                                        </select>
+                                    </div>
+
+                                    {category === 'novel' && (
+                                        <div className="group animate-fade-in">
+                                            <label className="flex items-center gap-2 text-slate-300 mb-2 text-sm font-medium group-hover:text-blue-400 transition-colors">
+                                                <BookOpen size={16} />
+                                                小说系列名称
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="series"
+                                                value={series}
+                                                onChange={(e) => setSeries(e.target.value)}
+                                                placeholder="例如：诚实咖啡"
+                                                required={category === 'novel'}
+                                                className="block w-full bg-slate-800 text-slate-200 border border-slate-700 rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500 transition-colors placeholder-slate-500"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+
                                 {/* Cover Image */}
                                 <div className="group">
                                     <label className="flex items-center gap-2 text-slate-300 mb-2 text-sm font-medium group-hover:text-blue-400 transition-colors">

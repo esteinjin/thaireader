@@ -27,9 +27,21 @@ export default function CoursePlayer() {
     useEffect(() => {
         getCourse(id).then(async (data) => {
             setCourse(data);
-            const jsonUrl = data.jsonUrl.startsWith('http') ? data.jsonUrl : `http://localhost:3001${data.jsonUrl}`;
-            const res = await axios.get(jsonUrl);
-            setContent(res.data);
+            if (data && data.jsonUrl) {
+                const jsonUrl = data.jsonUrl.startsWith('http') ? data.jsonUrl : `http://localhost:3001${data.jsonUrl}`;
+                try {
+                    const res = await axios.get(jsonUrl);
+                    setContent(res.data);
+                } catch (err) {
+                    console.error("Failed to load JSON content:", err);
+                    // Set empty content to avoid infinite loading state if JSON fails
+                    setContent({ sentences: [] });
+                }
+            } else {
+                setContent({ sentences: [] });
+            }
+        }).catch(err => {
+            console.error("Failed to load course:", err);
         });
     }, [id]);
 
@@ -175,8 +187,8 @@ export default function CoursePlayer() {
         </div>
     );
 
-    const coverUrl = course.coverUrl.startsWith('http') ? course.coverUrl : `http://localhost:3001${course.coverUrl}`;
-    const audioUrl = course.audioUrl.startsWith('http') ? course.audioUrl : `http://localhost:3001${course.audioUrl}`;
+    const coverUrl = course.coverUrl ? (course.coverUrl.startsWith('http') ? course.coverUrl : `http://localhost:3001${course.coverUrl}`) : '';
+    const audioUrl = course.audioUrl ? (course.audioUrl.startsWith('http') ? course.audioUrl : `http://localhost:3001${course.audioUrl}`) : '';
 
     return (
         <div className="fixed inset-0 bg-slate-950 text-white font-sans overflow-hidden">

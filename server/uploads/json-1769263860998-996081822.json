@@ -1,0 +1,2088 @@
+{
+  "title": "Why Kind People are Dangerous",
+  "description": "An exploration of why the most dangerous and strong people are often the kind ones who choose peace over conflict.",
+  "sentences": [
+    {
+      "thai": "คนที่น่ากลัวที่สุด คือ คนใจดี",
+      "chinese": "在这个世界上，最可怕的人往往是善良的人。",
+      "startTime": 0,
+      "endTime": 2.3,
+      "words": [
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 0,
+          "endTime": 0.2
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 0.2,
+          "endTime": 0.4
+        },
+        {
+          "thai": "น่ากลัว",
+          "chinese": "可怕",
+          "startTime": 0.4,
+          "endTime": 0.8
+        },
+        {
+          "thai": "ที่สุด",
+          "chinese": "最",
+          "startTime": 0.8,
+          "endTime": 1.2
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 1.3,
+          "endTime": 1.5
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 1.6,
+          "endTime": 1.8
+        },
+        {
+          "thai": "ใจดี",
+          "chinese": "善良",
+          "startTime": 1.8,
+          "endTime": 2.3
+        }
+      ]
+    },
+    {
+      "thai": "คนที่นิ่งที่สุด คือ คนที่รู้วิธีทำร้ายคุณได้ยับเยินที่สุด",
+      "chinese": "最安静的人往往最清楚如何彻底摧毁你。",
+      "startTime": 3.1,
+      "endTime": 6.1,
+      "words": [
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 3.1,
+          "endTime": 3.3
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 3.3,
+          "endTime": 3.4
+        },
+        {
+          "thai": "นิ่ง",
+          "chinese": "安静",
+          "startTime": 3.4,
+          "endTime": 3.7
+        },
+        {
+          "thai": "ที่สุด",
+          "chinese": "最",
+          "startTime": 3.7,
+          "endTime": 4.1
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 4.1,
+          "endTime": 4.3
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 4.3,
+          "endTime": 4.5
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 4.5,
+          "endTime": 4.6
+        },
+        {
+          "thai": "รู้",
+          "chinese": "知道",
+          "startTime": 4.6,
+          "endTime": 4.8
+        },
+        {
+          "thai": "วิธี",
+          "chinese": "方法",
+          "startTime": 4.8,
+          "endTime": 5.1
+        },
+        {
+          "thai": "ทำร้าย",
+          "chinese": "伤害",
+          "startTime": 5.1,
+          "endTime": 5.5
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 5.5,
+          "endTime": 5.7
+        },
+        {
+          "thai": "ได้",
+          "chinese": "得",
+          "startTime": 5.7,
+          "endTime": 5.8
+        },
+        {
+          "thai": "ยับเยิน",
+          "chinese": "粉碎",
+          "startTime": 5.8,
+          "endTime": 6
+        },
+        {
+          "thai": "ที่สุด",
+          "chinese": "最",
+          "startTime": 6,
+          "endTime": 6.1
+        }
+      ]
+    },
+    {
+      "thai": "คนที่น่ากลัว ไม่ใช่คนที่คอย เสียงดัง เอะอะ โวยวาย ข่มขู่",
+      "chinese": "可怕的人不是那些大声喧哗、大喊大叫或威胁的人，",
+      "startTime": 6.8,
+      "endTime": 10.4,
+      "words": [
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 6.8,
+          "endTime": 7
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 7,
+          "endTime": 7.1
+        },
+        {
+          "thai": "น่ากลัว",
+          "chinese": "可怕",
+          "startTime": 7.1,
+          "endTime": 7.5
+        },
+        {
+          "thai": "ไม่ใช่",
+          "chinese": "不是",
+          "startTime": 7.6,
+          "endTime": 8
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 8.1,
+          "endTime": 8.2
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 8.2,
+          "endTime": 8.3
+        },
+        {
+          "thai": "คอย",
+          "chinese": "老是",
+          "startTime": 8.3,
+          "endTime": 8.5
+        },
+        {
+          "thai": "เสียงดัง",
+          "chinese": "大声",
+          "startTime": 8.5,
+          "endTime": 8.8
+        },
+        {
+          "thai": "เอะอะ",
+          "chinese": "嚷嚷",
+          "startTime": 8.8,
+          "endTime": 9.1
+        },
+        {
+          "thai": "โวยวาย",
+          "chinese": "吵闹",
+          "startTime": 9.1,
+          "endTime": 9.6
+        },
+        {
+          "thai": "ข่มขู่",
+          "chinese": "威胁",
+          "startTime": 9.6,
+          "endTime": 10.4
+        }
+      ]
+    },
+    {
+      "thai": "แต่คือคนที่ส่งยิ้มให้คุณ ทั้งที่ในมือเขา ถือไพ่เหนือกว่าคุณทุกใบ",
+      "chinese": "而是那些虽然手中握着必胜的底牌，却依然对你微笑的人。",
+      "startTime": 11.2,
+      "endTime": 15,
+      "words": [
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 11.2,
+          "endTime": 11.4
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 11.4,
+          "endTime": 11.6
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 11.6,
+          "endTime": 11.7
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 11.7,
+          "endTime": 11.8
+        },
+        {
+          "thai": "ส่ง",
+          "chinese": "送",
+          "startTime": 11.8,
+          "endTime": 12
+        },
+        {
+          "thai": "ยิ้ม",
+          "chinese": "微笑",
+          "startTime": 12,
+          "endTime": 12.2
+        },
+        {
+          "thai": "ให้",
+          "chinese": "给",
+          "startTime": 12.2,
+          "endTime": 12.3
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 12.3,
+          "endTime": 12.4
+        },
+        {
+          "thai": "ทั้งที่",
+          "chinese": "虽然",
+          "startTime": 12.5,
+          "endTime": 12.8
+        },
+        {
+          "thai": "ใน",
+          "chinese": "在",
+          "startTime": 12.8,
+          "endTime": 12.9
+        },
+        {
+          "thai": "มือ",
+          "chinese": "手",
+          "startTime": 12.9,
+          "endTime": 13.1
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 13.1,
+          "endTime": 13.3
+        },
+        {
+          "thai": "ถือ",
+          "chinese": "拿着",
+          "startTime": 13.4,
+          "endTime": 13.6
+        },
+        {
+          "thai": "ไพ่",
+          "chinese": "牌",
+          "startTime": 13.6,
+          "endTime": 13.9
+        },
+        {
+          "thai": "เหนือกว่า",
+          "chinese": "高于",
+          "startTime": 13.9,
+          "endTime": 14.4
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 14.4,
+          "endTime": 14.6
+        },
+        {
+          "thai": "ทุกใบ",
+          "chinese": "每一张",
+          "startTime": 14.6,
+          "endTime": 15
+        }
+      ]
+    },
+    {
+      "thai": "คนใจดีที่คุณเห็น ไม่ได้แปลว่าเขาไม่มีเขี้ยวเล็บ หรือทำอะไรใครไม่เป็น",
+      "chinese": "你看到的善良并不意味着他们没有锋芒，或者不懂得反击。",
+      "startTime": 15.5,
+      "endTime": 19.1,
+      "words": [
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 15.5,
+          "endTime": 15.7
+        },
+        {
+          "thai": "ใจดี",
+          "chinese": "善良",
+          "startTime": 15.7,
+          "endTime": 16.1
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 16.1,
+          "endTime": 16.2
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 16.2,
+          "endTime": 16.4
+        },
+        {
+          "thai": "เห็น",
+          "chinese": "看见",
+          "startTime": 16.4,
+          "endTime": 16.6
+        },
+        {
+          "thai": "ไม่ได้แปลว่า",
+          "chinese": "不意味着",
+          "startTime": 16.7,
+          "endTime": 17.3
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 17.3,
+          "endTime": 17.5
+        },
+        {
+          "thai": "ไม่มี",
+          "chinese": "没有",
+          "startTime": 17.5,
+          "endTime": 17.7
+        },
+        {
+          "thai": "เขี้ยวเล็บ",
+          "chinese": "锋芒",
+          "startTime": 17.7,
+          "endTime": 18.2
+        },
+        {
+          "thai": "หรือ",
+          "chinese": "或者",
+          "startTime": 18.2,
+          "endTime": 18.4
+        },
+        {
+          "thai": "ทำ",
+          "chinese": "做",
+          "startTime": 18.4,
+          "endTime": 18.6
+        },
+        {
+          "thai": "อะไร",
+          "chinese": "什么",
+          "startTime": 18.6,
+          "endTime": 18.8
+        },
+        {
+          "thai": "ใคร",
+          "chinese": "谁",
+          "startTime": 18.8,
+          "endTime": 18.9
+        },
+        {
+          "thai": "ไม่เป็น",
+          "chinese": "不会",
+          "startTime": 18.9,
+          "endTime": 19.1
+        }
+      ]
+    },
+    {
+      "thai": "แต่เขาคือคนที่ผ่านนรกมาจนชิน เขารู้วิธีดับไฟในใจตัวเองได้",
+      "chinese": "这意味着他们经历了无数次地狱般的磨炼，学会了如何平复内心的怒火。",
+      "startTime": 19.9,
+      "endTime": 24.3,
+      "words": [
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 19.9,
+          "endTime": 20.1
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 20.1,
+          "endTime": 20.3
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 20.3,
+          "endTime": 20.5
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 20.5,
+          "endTime": 20.6
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 20.6,
+          "endTime": 20.7
+        },
+        {
+          "thai": "ผ่าน",
+          "chinese": "经过",
+          "startTime": 20.7,
+          "endTime": 20.9
+        },
+        {
+          "thai": "นรก",
+          "chinese": "地狱",
+          "startTime": 20.9,
+          "endTime": 21.4
+        },
+        {
+          "thai": "มา",
+          "chinese": "来",
+          "startTime": 21.4,
+          "endTime": 21.5
+        },
+        {
+          "thai": "จน",
+          "chinese": "直到",
+          "startTime": 21.5,
+          "endTime": 21.6
+        },
+        {
+          "thai": "ชิน",
+          "chinese": "习惯",
+          "startTime": 21.6,
+          "endTime": 22.1
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 22.3,
+          "endTime": 22.5
+        },
+        {
+          "thai": "รู้",
+          "chinese": "知道",
+          "startTime": 22.5,
+          "endTime": 22.7
+        },
+        {
+          "thai": "วิธี",
+          "chinese": "方法",
+          "startTime": 22.7,
+          "endTime": 23
+        },
+        {
+          "thai": "ดับไฟ",
+          "chinese": "灭火",
+          "startTime": 23,
+          "endTime": 23.4
+        },
+        {
+          "thai": "ใน",
+          "chinese": "在",
+          "startTime": 23.4,
+          "endTime": 23.5
+        },
+        {
+          "thai": "ใจ",
+          "chinese": "心",
+          "startTime": 23.5,
+          "endTime": 23.7
+        },
+        {
+          "thai": "ตัวเอง",
+          "chinese": "自己",
+          "startTime": 23.7,
+          "endTime": 24
+        },
+        {
+          "thai": "ได้",
+          "chinese": "可以",
+          "startTime": 24,
+          "endTime": 24.3
+        }
+      ]
+    },
+    {
+      "thai": "เขาอาจจะเคยถูกทำร้ายจนกระอักเลือด",
+      "chinese": "他们可能曾被伤害到呕血，",
+      "startTime": 25.1,
+      "endTime": 28,
+      "words": [
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 25.1,
+          "endTime": 25.3
+        },
+        {
+          "thai": "อาจจะ",
+          "chinese": "可能",
+          "startTime": 25.3,
+          "endTime": 25.7
+        },
+        {
+          "thai": "เคย",
+          "chinese": "曾",
+          "startTime": 25.7,
+          "endTime": 25.9
+        },
+        {
+          "thai": "ถูก",
+          "chinese": "被",
+          "startTime": 25.9,
+          "endTime": 26.2
+        },
+        {
+          "thai": "ทำร้าย",
+          "chinese": "伤害",
+          "startTime": 26.2,
+          "endTime": 26.7
+        },
+        {
+          "thai": "จน",
+          "chinese": "直到",
+          "startTime": 26.7,
+          "endTime": 27
+        },
+        {
+          "thai": "กระอัก",
+          "chinese": "吐",
+          "startTime": 27,
+          "endTime": 27.5
+        },
+        {
+          "thai": "เลือด",
+          "chinese": "血",
+          "startTime": 27.5,
+          "endTime": 28
+        }
+      ]
+    },
+    {
+      "thai": "เขาอาจจะเคยถูกมองข้าม เหมือนไม่มีตัวตน",
+      "chinese": "可能曾被忽视，仿佛透明人一般。",
+      "startTime": 28.6,
+      "endTime": 31.2,
+      "words": [
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 28.6,
+          "endTime": 28.8
+        },
+        {
+          "thai": "อาจจะ",
+          "chinese": "可能",
+          "startTime": 28.8,
+          "endTime": 29.1
+        },
+        {
+          "thai": "เคย",
+          "chinese": "曾",
+          "startTime": 29.1,
+          "endTime": 29.3
+        },
+        {
+          "thai": "ถูก",
+          "chinese": "被",
+          "startTime": 29.3,
+          "endTime": 29.6
+        },
+        {
+          "thai": "มองข้าม",
+          "chinese": "忽视",
+          "startTime": 29.6,
+          "endTime": 30.2
+        },
+        {
+          "thai": "เหมือน",
+          "chinese": "好像",
+          "startTime": 30.2,
+          "endTime": 30.4
+        },
+        {
+          "thai": "ไม่มี",
+          "chinese": "没有",
+          "startTime": 30.4,
+          "endTime": 30.7
+        },
+        {
+          "thai": "ตัวตน",
+          "chinese": "存在",
+          "startTime": 30.7,
+          "endTime": 31.2
+        }
+      ]
+    },
+    {
+      "thai": "แต่ที่เขาเลือกจะใจดี ไม่ใช่เพราะว่าเขาโลกสวยนะ แต่เป็นเพราะว่าเขาเห็นด้านมืดมาจนเบื่อแล้ว",
+      "chinese": "但他们选择善良，并不是因为天真，而是因为看透了阴暗面，甚至感到厌倦。",
+      "startTime": 31.8,
+      "endTime": 37.4,
+      "words": [
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 31.8,
+          "endTime": 32
+        },
+        {
+          "thai": "ที่",
+          "chinese": "之所以",
+          "startTime": 32,
+          "endTime": 32.1
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 32.1,
+          "endTime": 32.2
+        },
+        {
+          "thai": "เลือก",
+          "chinese": "选择",
+          "startTime": 32.2,
+          "endTime": 32.5
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 32.5,
+          "endTime": 32.6
+        },
+        {
+          "thai": "ใจดี",
+          "chinese": "善良",
+          "startTime": 32.6,
+          "endTime": 33
+        },
+        {
+          "thai": "ไม่ใช่",
+          "chinese": "不是",
+          "startTime": 33.1,
+          "endTime": 33.4
+        },
+        {
+          "thai": "เพราะว่า",
+          "chinese": "因为",
+          "startTime": 33.4,
+          "endTime": 33.7
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 33.7,
+          "endTime": 33.8
+        },
+        {
+          "thai": "โลกสวย",
+          "chinese": "理想化",
+          "startTime": 33.8,
+          "endTime": 34.3
+        },
+        {
+          "thai": "นะ",
+          "chinese": "呢",
+          "startTime": 34.3,
+          "endTime": 34.5
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 34.6,
+          "endTime": 34.8
+        },
+        {
+          "thai": "เป็น",
+          "chinese": "是",
+          "startTime": 34.8,
+          "endTime": 35
+        },
+        {
+          "thai": "เพราะว่า",
+          "chinese": "因为",
+          "startTime": 35,
+          "endTime": 35.3
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 35.3,
+          "endTime": 35.4
+        },
+        {
+          "thai": "เห็น",
+          "chinese": "看见",
+          "startTime": 35.4,
+          "endTime": 35.7
+        },
+        {
+          "thai": "ด้านมืด",
+          "chinese": "阴暗面",
+          "startTime": 35.7,
+          "endTime": 36.4
+        },
+        {
+          "thai": "มา",
+          "chinese": "来",
+          "startTime": 36.4,
+          "endTime": 36.6
+        },
+        {
+          "thai": "จน",
+          "chinese": "直到",
+          "startTime": 36.6,
+          "endTime": 36.8
+        },
+        {
+          "thai": "เบื่อ",
+          "chinese": "厌倦",
+          "startTime": 36.8,
+          "endTime": 37.1
+        },
+        {
+          "thai": "แล้ว",
+          "chinese": "了",
+          "startTime": 37.1,
+          "endTime": 37.4
+        }
+      ]
+    },
+    {
+      "thai": "ความแตกต่างระหว่างคนอ่อนแอกับคนใจดี คือ คนอ่อนแอเขาไม่มีทางเลือก เขาเลยต้องยอม",
+      "chinese": "弱者与善者的区别在于，弱者无从选择，所以只能屈服。",
+      "startTime": 38.6,
+      "endTime": 44.4,
+      "words": [
+        {
+          "thai": "ความแตกต่าง",
+          "chinese": "区别",
+          "startTime": 38.6,
+          "endTime": 39.3
+        },
+        {
+          "thai": "ระหว่าง",
+          "chinese": "之间",
+          "startTime": 39.3,
+          "endTime": 39.7
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 39.7,
+          "endTime": 39.8
+        },
+        {
+          "thai": "อ่อนแอ",
+          "chinese": "软弱",
+          "startTime": 39.8,
+          "endTime": 40.3
+        },
+        {
+          "thai": "กับ",
+          "chinese": "和",
+          "startTime": 40.3,
+          "endTime": 40.5
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 40.5,
+          "endTime": 40.6
+        },
+        {
+          "thai": "ใจดี",
+          "chinese": "善良",
+          "startTime": 40.6,
+          "endTime": 41.1
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 41.2,
+          "endTime": 41.4
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 41.4,
+          "endTime": 41.6
+        },
+        {
+          "thai": "อ่อนแอ",
+          "chinese": "软弱",
+          "startTime": 41.6,
+          "endTime": 42
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 42,
+          "endTime": 42.2
+        },
+        {
+          "thai": "ไม่มี",
+          "chinese": "没有",
+          "startTime": 42.2,
+          "endTime": 42.5
+        },
+        {
+          "thai": "ทางเลือก",
+          "chinese": "选择",
+          "startTime": 42.5,
+          "endTime": 43.2
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 43.3,
+          "endTime": 43.5
+        },
+        {
+          "thai": "เลย",
+          "chinese": "所以",
+          "startTime": 43.5,
+          "endTime": 43.7
+        },
+        {
+          "thai": "ต้อง",
+          "chinese": "必须",
+          "startTime": 43.7,
+          "endTime": 44
+        },
+        {
+          "thai": "ยอม",
+          "chinese": "屈服",
+          "startTime": 44,
+          "endTime": 44.4
+        }
+      ]
+    },
+    {
+      "thai": "แต่คนใจดี มีอำนาจทำลายล้างอยู่ในมือ แต่เลือกที่จะกักเก็บมันไว้",
+      "chinese": "但善者手中握有摧毁的力量，却选择收敛锋芒。",
+      "startTime": 45.1,
+      "endTime": 49.2,
+      "words": [
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 45.1,
+          "endTime": 45.3
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 45.3,
+          "endTime": 45.4
+        },
+        {
+          "thai": "ใจดี",
+          "chinese": "善良",
+          "startTime": 45.4,
+          "endTime": 45.9
+        },
+        {
+          "thai": "มี",
+          "chinese": "有",
+          "startTime": 46,
+          "endTime": 46.2
+        },
+        {
+          "thai": "อำนาจ",
+          "chinese": "权力",
+          "startTime": 46.2,
+          "endTime": 46.7
+        },
+        {
+          "thai": "ทำลายล้าง",
+          "chinese": "摧毁",
+          "startTime": 46.7,
+          "endTime": 47.5
+        },
+        {
+          "thai": "อยู่",
+          "chinese": "在",
+          "startTime": 47.5,
+          "endTime": 47.7
+        },
+        {
+          "thai": "ใน",
+          "chinese": "里",
+          "startTime": 47.7,
+          "endTime": 47.8
+        },
+        {
+          "thai": "มือ",
+          "chinese": "手",
+          "startTime": 47.8,
+          "endTime": 48.1
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 48.2,
+          "endTime": 48.4
+        },
+        {
+          "thai": "เลือก",
+          "chinese": "选择",
+          "startTime": 48.4,
+          "endTime": 48.6
+        },
+        {
+          "thai": "ที่",
+          "chinese": "去",
+          "startTime": 48.6,
+          "endTime": 48.7
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 48.7,
+          "endTime": 48.8
+        },
+        {
+          "thai": "กักเก็บ",
+          "chinese": "储存",
+          "startTime": 48.8,
+          "endTime": 49
+        },
+        {
+          "thai": "มัน",
+          "chinese": "它",
+          "startTime": 49,
+          "endTime": 49.1
+        },
+        {
+          "thai": "ไว้",
+          "chinese": "住",
+          "startTime": 49.1,
+          "endTime": 49.2
+        }
+      ]
+    },
+    {
+      "thai": "และนี่คือความแกร่งที่แท้จริง คือการมีคมแฝกในมือ แต่เลือกจะเก็บมันไว้ในฝัก",
+      "chinese": "这才是真正的强大：怀揣利刃，却选择藏锋于鞘。",
+      "startTime": 49.8,
+      "endTime": 53.5,
+      "words": [
+        {
+          "thai": "และ",
+          "chinese": "和",
+          "startTime": 49.8,
+          "endTime": 50
+        },
+        {
+          "thai": "นี่",
+          "chinese": "这",
+          "startTime": 50,
+          "endTime": 50.2
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 50.2,
+          "endTime": 50.4
+        },
+        {
+          "thai": "ความแกร่ง",
+          "chinese": "强大",
+          "startTime": 50.4,
+          "endTime": 50.9
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 50.9,
+          "endTime": 51
+        },
+        {
+          "thai": "แท้จริง",
+          "chinese": "真实",
+          "startTime": 51,
+          "endTime": 51.5
+        },
+        {
+          "thai": "คือ",
+          "chinese": "是",
+          "startTime": 51.6,
+          "endTime": 51.8
+        },
+        {
+          "thai": "การ",
+          "chinese": "的事情",
+          "startTime": 51.8,
+          "endTime": 51.9
+        },
+        {
+          "thai": "มี",
+          "chinese": "有",
+          "startTime": 51.9,
+          "endTime": 52.1
+        },
+        {
+          "thai": "คมแฝก",
+          "chinese": "利刃",
+          "startTime": 52.1,
+          "endTime": 52.5
+        },
+        {
+          "thai": "ใน",
+          "chinese": "在",
+          "startTime": 52.5,
+          "endTime": 52.6
+        },
+        {
+          "thai": "มือ",
+          "chinese": "手",
+          "startTime": 52.6,
+          "endTime": 52.8
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 52.9,
+          "endTime": 53
+        },
+        {
+          "thai": "เลือก",
+          "chinese": "选择",
+          "startTime": 53,
+          "endTime": 53.2
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 53.2,
+          "endTime": 53.3
+        },
+        {
+          "thai": "เก็บ",
+          "chinese": "收",
+          "startTime": 53.3,
+          "endTime": 53.4
+        },
+        {
+          "thai": "มัน",
+          "chinese": "它",
+          "startTime": 53.4,
+          "endTime": 53.5
+        },
+        {
+          "thai": "ไว้",
+          "chinese": "在",
+          "startTime": 53.5,
+          "endTime": 53.5
+        },
+        {
+          "thai": "ใน",
+          "chinese": "在",
+          "startTime": 53.5,
+          "endTime": 53.5
+        },
+        {
+          "thai": "ฝัก",
+          "chinese": "鞘",
+          "startTime": 53.5,
+          "endTime": 53.5
+        }
+      ]
+    },
+    {
+      "thai": "คุณลองดูบางคนสิ ที่โดนกระทำเยอะๆ เขาอาจจะไม่ได้ตอบโต้อะไรเลย แต่เขาฟ้อง เขาเอาจริง",
+      "chinese": "看看那些遭受重创的人，他们可能一言不发，但一旦行动，便是雷霆万钧。",
+      "startTime": 54.1,
+      "endTime": 60,
+      "words": [
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 54.1,
+          "endTime": 54.3
+        },
+        {
+          "thai": "ลองดู",
+          "chinese": "看",
+          "startTime": 54.3,
+          "endTime": 54.6
+        },
+        {
+          "thai": "บางคน",
+          "chinese": "有些人",
+          "startTime": 54.6,
+          "endTime": 55
+        },
+        {
+          "thai": "สิ",
+          "chinese": "吧",
+          "startTime": 55,
+          "endTime": 55.2
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 55.3,
+          "endTime": 55.4
+        },
+        {
+          "thai": "โดน",
+          "chinese": "遭受",
+          "startTime": 55.4,
+          "endTime": 55.6
+        },
+        {
+          "thai": "กระทำ",
+          "chinese": "对待",
+          "startTime": 55.6,
+          "endTime": 56.1
+        },
+        {
+          "thai": "เยอะ",
+          "chinese": "多",
+          "startTime": 56.1,
+          "endTime": 56.4
+        },
+        {
+          "thai": "ๆ",
+          "chinese": "等",
+          "startTime": 56.4,
+          "endTime": 56.7
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 56.8,
+          "endTime": 57
+        },
+        {
+          "thai": "อาจจะ",
+          "chinese": "可能",
+          "startTime": 57,
+          "endTime": 57.4
+        },
+        {
+          "thai": "ไม่ได้",
+          "chinese": "没有",
+          "startTime": 57.4,
+          "endTime": 57.6
+        },
+        {
+          "thai": "ตอบโต้",
+          "chinese": "反击",
+          "startTime": 57.6,
+          "endTime": 58.1
+        },
+        {
+          "thai": "อะไร",
+          "chinese": "什么",
+          "startTime": 58.1,
+          "endTime": 58.3
+        },
+        {
+          "thai": "เลย",
+          "chinese": "一点",
+          "startTime": 58.3,
+          "endTime": 58.6
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 58.7,
+          "endTime": 58.9
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 58.9,
+          "endTime": 59.1
+        },
+        {
+          "thai": "ฟ้อง",
+          "chinese": "控告",
+          "startTime": 59.1,
+          "endTime": 59.4
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 59.5,
+          "endTime": 59.7
+        },
+        {
+          "thai": "เอาจริง",
+          "chinese": "认真",
+          "startTime": 59.7,
+          "endTime": 60
+        }
+      ]
+    },
+    {
+      "thai": "ถ้าวันไหนเขาเลือกจะสู้ เขาจะไม่เสียเวลามานั่งด่า เขาไม่ต้องการคำขอโทษ",
+      "chinese": "当他们最终决定反击时，绝不会浪费时间辱骂，也不需要道歉。",
+      "startTime": 60.8,
+      "endTime": 64.8,
+      "words": [
+        {
+          "thai": "ถ้า",
+          "chinese": "如果",
+          "startTime": 60.8,
+          "endTime": 61
+        },
+        {
+          "thai": "วัน",
+          "chinese": "天",
+          "startTime": 61,
+          "endTime": 61.2
+        },
+        {
+          "thai": "ไหน",
+          "chinese": "哪",
+          "startTime": 61.2,
+          "endTime": 61.4
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 61.4,
+          "endTime": 61.6
+        },
+        {
+          "thai": "เลือก",
+          "chinese": "选择",
+          "startTime": 61.6,
+          "endTime": 61.9
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 61.9,
+          "endTime": 62
+        },
+        {
+          "thai": "สู้",
+          "chinese": "斗争",
+          "startTime": 62,
+          "endTime": 62.3
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 62.4,
+          "endTime": 62.6
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 62.6,
+          "endTime": 62.7
+        },
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 62.7,
+          "endTime": 62.9
+        },
+        {
+          "thai": "เสีย",
+          "chinese": "浪费",
+          "startTime": 62.9,
+          "endTime": 63.1
+        },
+        {
+          "thai": "เวลา",
+          "chinese": "时间",
+          "startTime": 63.1,
+          "endTime": 63.4
+        },
+        {
+          "thai": "มา",
+          "chinese": "来",
+          "startTime": 63.4,
+          "endTime": 63.5
+        },
+        {
+          "thai": "นั่ง",
+          "chinese": "坐着",
+          "startTime": 63.5,
+          "endTime": 63.7
+        },
+        {
+          "thai": "ด่า",
+          "chinese": "骂",
+          "startTime": 63.7,
+          "endTime": 64
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 64.1,
+          "endTime": 64.3
+        },
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 64.3,
+          "endTime": 64.5
+        },
+        {
+          "thai": "ต้องการ",
+          "chinese": "需要",
+          "startTime": 64.5,
+          "endTime": 64.8
+        },
+        {
+          "thai": "คำขอโทษ",
+          "chinese": "道歉",
+          "startTime": 64.8,
+          "endTime": 64.8
+        }
+      ]
+    },
+    {
+      "thai": "และไม่เสียแรงไปกับการโต้เถียง แต่เขาจะลบคุณออกจากวงจรชีวิต เหมือนคุณไม่เคยมีตัวตนอยู่บนโลกใบนี้",
+      "chinese": "他们不会浪费精力争辩，而是直接将你从生命中抹去，仿佛你从未存在过。",
+      "startTime": 65.5,
+      "endTime": 70.2,
+      "words": [
+        {
+          "thai": "และ",
+          "chinese": "和",
+          "startTime": 65.5,
+          "endTime": 65.7
+        },
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 65.7,
+          "endTime": 65.9
+        },
+        {
+          "thai": "เสีย",
+          "chinese": "浪费",
+          "startTime": 65.9,
+          "endTime": 66.1
+        },
+        {
+          "thai": "แรง",
+          "chinese": "力气",
+          "startTime": 66.1,
+          "endTime": 66.4
+        },
+        {
+          "thai": "ไป",
+          "chinese": "去",
+          "startTime": 66.4,
+          "endTime": 66.6
+        },
+        {
+          "thai": "กับ",
+          "chinese": "和",
+          "startTime": 66.6,
+          "endTime": 66.7
+        },
+        {
+          "thai": "การ",
+          "chinese": "的事情",
+          "startTime": 66.7,
+          "endTime": 66.8
+        },
+        {
+          "thai": "โต้เถียง",
+          "chinese": "争辩",
+          "startTime": 66.8,
+          "endTime": 67.5
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 67.6,
+          "endTime": 67.8
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 67.8,
+          "endTime": 68
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 68,
+          "endTime": 68.1
+        },
+        {
+          "thai": "ลบ",
+          "chinese": "抹去",
+          "startTime": 68.1,
+          "endTime": 68.3
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 68.3,
+          "endTime": 68.5
+        },
+        {
+          "thai": "ออก",
+          "chinese": "出",
+          "startTime": 68.5,
+          "endTime": 68.7
+        },
+        {
+          "thai": "จาก",
+          "chinese": "从",
+          "startTime": 68.7,
+          "endTime": 68.9
+        },
+        {
+          "thai": "วงจรชีวิต",
+          "chinese": "生活圈",
+          "startTime": 68.9,
+          "endTime": 69.4
+        },
+        {
+          "thai": "เหมือน",
+          "chinese": "好像",
+          "startTime": 69.5,
+          "endTime": 69.7
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 69.7,
+          "endTime": 69.9
+        },
+        {
+          "thai": "ไม่เคย",
+          "chinese": "从不曾",
+          "startTime": 69.9,
+          "endTime": 70.2
+        },
+        {
+          "thai": "มี",
+          "chinese": "有",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "ตัวตน",
+          "chinese": "存在",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "อยู่",
+          "chinese": "在",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "บน",
+          "chinese": "在",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "โลก",
+          "chinese": "世界",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "ใบ",
+          "chinese": "个",
+          "startTime": 70.2,
+          "endTime": 70.2
+        },
+        {
+          "thai": "นี้",
+          "chinese": "这",
+          "startTime": 70.2,
+          "endTime": 70.2
+        }
+      ]
+    },
+    {
+      "thai": "เขาจะปล่อยให้ความล้มเหลวของคุณ และความสำเร็จของเขา ทำหน้าที่พิพากษาแทน",
+      "chinese": "他们会让你失败的下场和他们成功的果实，去替他们做出审判。",
+      "startTime": 70.8,
+      "endTime": 74.8,
+      "words": [
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 70.8,
+          "endTime": 71
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 71,
+          "endTime": 71.1
+        },
+        {
+          "thai": "ปล่อย",
+          "chinese": "放任",
+          "startTime": 71.1,
+          "endTime": 71.4
+        },
+        {
+          "thai": "ให้",
+          "chinese": "给",
+          "startTime": 71.4,
+          "endTime": 71.5
+        },
+        {
+          "thai": "ความล้มเหลว",
+          "chinese": "失败",
+          "startTime": 71.5,
+          "endTime": 72.1
+        },
+        {
+          "thai": "ของ",
+          "chinese": "的",
+          "startTime": 72.1,
+          "endTime": 72.3
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 72.3,
+          "endTime": 72.6
+        },
+        {
+          "thai": "และ",
+          "chinese": "和",
+          "startTime": 72.7,
+          "endTime": 72.9
+        },
+        {
+          "thai": "ความสำเร็จ",
+          "chinese": "成功",
+          "startTime": 72.9,
+          "endTime": 73.5
+        },
+        {
+          "thai": "ของ",
+          "chinese": "的",
+          "startTime": 73.5,
+          "endTime": 73.7
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 73.7,
+          "endTime": 73.9
+        },
+        {
+          "thai": "ทำ",
+          "chinese": "做",
+          "startTime": 74,
+          "endTime": 74.2
+        },
+        {
+          "thai": "หน้าที่",
+          "chinese": "任务",
+          "startTime": 74.2,
+          "endTime": 74.5
+        },
+        {
+          "thai": "พิพากษา",
+          "chinese": "审判",
+          "startTime": 74.5,
+          "endTime": 74.7
+        },
+        {
+          "thai": "แทน",
+          "chinese": "代替",
+          "startTime": 74.7,
+          "endTime": 74.8
+        }
+      ]
+    },
+    {
+      "thai": "เขาทำลายคุณได้ โดยที่หัวใจเขาไม่สั่นคลอนเลยสักนิด",
+      "chinese": "他们可以摧毁你，而内心不起一丝波澜。",
+      "startTime": 75.8,
+      "endTime": 78.5,
+      "words": [
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 75.8,
+          "endTime": 76
+        },
+        {
+          "thai": "ทำลาย",
+          "chinese": "摧毁",
+          "startTime": 76,
+          "endTime": 76.5
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 76.5,
+          "endTime": 76.7
+        },
+        {
+          "thai": "ได้",
+          "chinese": "能够",
+          "startTime": 76.7,
+          "endTime": 76.9
+        },
+        {
+          "thai": "โดยที่",
+          "chinese": "由于",
+          "startTime": 77,
+          "endTime": 77.3
+        },
+        {
+          "thai": "หัวใจ",
+          "chinese": "心",
+          "startTime": 77.3,
+          "endTime": 77.7
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 77.7,
+          "endTime": 77.9
+        },
+        {
+          "thai": "ไม่",
+          "chinese": "不",
+          "startTime": 77.9,
+          "endTime": 78.1
+        },
+        {
+          "thai": "สั่นคลอน",
+          "chinese": "动摇",
+          "startTime": 78.1,
+          "endTime": 78.4
+        },
+        {
+          "thai": "เลย",
+          "chinese": "一点",
+          "startTime": 78.4,
+          "endTime": 78.5
+        },
+        {
+          "thai": "สักนิด",
+          "chinese": "一点点",
+          "startTime": 78.5,
+          "endTime": 78.5
+        }
+      ]
+    },
+    {
+      "thai": "ถ้าคุณเป็นคนหนึ่งที่ยอมถอยเพื่อรักษาความสงบ จงภูมิใจ",
+      "chinese": "如果你是为了维持和平而退让的那个人，请感到自豪。",
+      "startTime": 79.2,
+      "endTime": 82.3,
+      "words": [
+        {
+          "thai": "ถ้า",
+          "chinese": "如果",
+          "startTime": 79.2,
+          "endTime": 79.4
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 79.4,
+          "endTime": 79.6
+        },
+        {
+          "thai": "เป็น",
+          "chinese": "是",
+          "startTime": 79.6,
+          "endTime": 79.8
+        },
+        {
+          "thai": "คน",
+          "chinese": "人",
+          "startTime": 79.8,
+          "endTime": 79.9
+        },
+        {
+          "thai": "หนึ่ง",
+          "chinese": "一",
+          "startTime": 79.9,
+          "endTime": 80.1
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 80.1,
+          "endTime": 80.2
+        },
+        {
+          "thai": "ยอม",
+          "chinese": "屈服",
+          "startTime": 80.2,
+          "endTime": 80.5
+        },
+        {
+          "thai": "ถอย",
+          "chinese": "退后",
+          "startTime": 80.5,
+          "endTime": 80.8
+        },
+        {
+          "thai": "เพื่อ",
+          "chinese": "为了",
+          "startTime": 80.9,
+          "endTime": 81.2
+        },
+        {
+          "thai": "รักษา",
+          "chinese": "维持",
+          "startTime": 81.2,
+          "endTime": 81.6
+        },
+        {
+          "thai": "ความสงบ",
+          "chinese": "安静",
+          "startTime": 81.6,
+          "endTime": 82
+        },
+        {
+          "thai": "จง",
+          "chinese": "要",
+          "startTime": 82.1,
+          "endTime": 82.2
+        },
+        {
+          "thai": "ภูมิใจ",
+          "chinese": "骄傲",
+          "startTime": 82.2,
+          "endTime": 82.3
+        }
+      ]
+    },
+    {
+      "thai": "คุณไม่ได้ขี้ขลาด แต่คุณแค่แพงเกินไปสำหรับสงครามเด็กน้อย",
+      "chinese": "你并非懦弱，只是你太高贵，不屑于参与幼稚的战争。",
+      "startTime": 83,
+      "endTime": 86.4,
+      "words": [
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 83,
+          "endTime": 83.2
+        },
+        {
+          "thai": "ไม่ได้",
+          "chinese": "没有",
+          "startTime": 83.2,
+          "endTime": 83.5
+        },
+        {
+          "thai": "ขี้ขลาด",
+          "chinese": "懦弱",
+          "startTime": 83.5,
+          "endTime": 84.1
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 84.2,
+          "endTime": 84.4
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 84.4,
+          "endTime": 84.6
+        },
+        {
+          "thai": "แค่",
+          "chinese": "只是",
+          "startTime": 84.6,
+          "endTime": 84.8
+        },
+        {
+          "thai": "แพง",
+          "chinese": "贵",
+          "startTime": 84.8,
+          "endTime": 85.2
+        },
+        {
+          "thai": "เกินไป",
+          "chinese": "太",
+          "startTime": 85.2,
+          "endTime": 85.5
+        },
+        {
+          "thai": "สำหรับ",
+          "chinese": "为了",
+          "startTime": 85.5,
+          "endTime": 85.8
+        },
+        {
+          "thai": "สงคราม",
+          "chinese": "战争",
+          "startTime": 85.8,
+          "endTime": 86.2
+        },
+        {
+          "thai": "เด็กน้อย",
+          "chinese": "小孩子",
+          "startTime": 86.2,
+          "endTime": 86.4
+        }
+      ]
+    },
+    {
+      "thai": "คุณอาจจะดูนิ่งเหมือนพายุก่อนที่มันจะสงบ แต่คุณรู้และเขาก็รู้",
+      "chinese": "你或许看起来平静如风暴过境，但你知，他也知……",
+      "startTime": 87.2,
+      "endTime": 91.3,
+      "words": [
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 87.2,
+          "endTime": 87.4
+        },
+        {
+          "thai": "อาจจะ",
+          "chinese": "可能",
+          "startTime": 87.4,
+          "endTime": 87.7
+        },
+        {
+          "thai": "ดู",
+          "chinese": "看",
+          "startTime": 87.7,
+          "endTime": 87.9
+        },
+        {
+          "thai": "นิ่ง",
+          "chinese": "安静",
+          "startTime": 87.9,
+          "endTime": 88.2
+        },
+        {
+          "thai": "เหมือน",
+          "chinese": "像",
+          "startTime": 88.2,
+          "endTime": 88.5
+        },
+        {
+          "thai": "พายุ",
+          "chinese": "风暴",
+          "startTime": 88.5,
+          "endTime": 89.1
+        },
+        {
+          "thai": "ก่อน",
+          "chinese": "前",
+          "startTime": 89.1,
+          "endTime": 89.4
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 89.4,
+          "endTime": 89.5
+        },
+        {
+          "thai": "มัน",
+          "chinese": "它",
+          "startTime": 89.5,
+          "endTime": 89.7
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 89.7,
+          "endTime": 89.8
+        },
+        {
+          "thai": "สงบ",
+          "chinese": "安静",
+          "startTime": 89.8,
+          "endTime": 90.2
+        },
+        {
+          "thai": "แต่",
+          "chinese": "但",
+          "startTime": 90.3,
+          "endTime": 90.5
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 90.5,
+          "endTime": 90.7
+        },
+        {
+          "thai": "รู้",
+          "chinese": "知道",
+          "startTime": 90.7,
+          "endTime": 90.9
+        },
+        {
+          "thai": "และ",
+          "chinese": "和",
+          "startTime": 91,
+          "endTime": 91.1
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 91.1,
+          "endTime": 91.2
+        },
+        {
+          "thai": "ก็",
+          "chinese": "也",
+          "startTime": 91.2,
+          "endTime": 91.3
+        },
+        {
+          "thai": "รู้",
+          "chinese": "知道",
+          "startTime": 91.3,
+          "endTime": 91.3
+        }
+      ]
+    },
+    {
+      "thai": "ว่าถ้าคุณเริ่มขยับเมื่อไหร่ ทุกอย่างที่เขาสร้างมา จะพังทลายลงทันที",
+      "chinese": "只要你一旦开始行动，他所建立的一切都将瞬间崩塌。",
+      "startTime": 91.8,
+      "endTime": 96.1,
+      "words": [
+        {
+          "thai": "ว่า",
+          "chinese": "说",
+          "startTime": 91.8,
+          "endTime": 92
+        },
+        {
+          "thai": "ถ้า",
+          "chinese": "如果",
+          "startTime": 92,
+          "endTime": 92.2
+        },
+        {
+          "thai": "คุณ",
+          "chinese": "你",
+          "startTime": 92.2,
+          "endTime": 92.4
+        },
+        {
+          "thai": "เริ่ม",
+          "chinese": "开始",
+          "startTime": 92.4,
+          "endTime": 92.7
+        },
+        {
+          "thai": "ขยับ",
+          "chinese": "动弹",
+          "startTime": 92.7,
+          "endTime": 93.1
+        },
+        {
+          "thai": "เมื่อไหร่",
+          "chinese": "什么时候",
+          "startTime": 93.1,
+          "endTime": 93.6
+        },
+        {
+          "thai": "ทุกอย่าง",
+          "chinese": "每件事",
+          "startTime": 93.7,
+          "endTime": 94.2
+        },
+        {
+          "thai": "ที่",
+          "chinese": "这",
+          "startTime": 94.2,
+          "endTime": 94.4
+        },
+        {
+          "thai": "เขา",
+          "chinese": "他",
+          "startTime": 94.4,
+          "endTime": 94.5
+        },
+        {
+          "thai": "สร้าง",
+          "chinese": "建立",
+          "startTime": 94.5,
+          "endTime": 94.8
+        },
+        {
+          "thai": "มา",
+          "chinese": "来",
+          "startTime": 94.8,
+          "endTime": 95
+        },
+        {
+          "thai": "จะ",
+          "chinese": "将",
+          "startTime": 95.1,
+          "endTime": 95.2
+        },
+        {
+          "thai": "พังทลาย",
+          "chinese": "崩溃",
+          "startTime": 95.2,
+          "endTime": 95.8
+        },
+        {
+          "thai": "ลง",
+          "chinese": "下",
+          "startTime": 95.8,
+          "endTime": 95.9
+        },
+        {
+          "thai": "ทันที",
+          "chinese": "立刻",
+          "startTime": 95.9,
+          "endTime": 96.1
+        }
+      ]
+    }
+  ]
+}

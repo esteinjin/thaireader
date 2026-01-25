@@ -66,17 +66,17 @@ const uploadFields = upload.fields([
 app.post('/api/admin/upload', uploadFields, async (req, res) => {
     try {
         const files = req.files;
+        const { category, series } = req.body; // Get new fields
+
         if (!files || !files.cover || !files.audio || !files.json) {
             return res.status(400).json({ message: 'Missing files' });
         }
 
         // 1. Read JSON content to get metadata (Title, Desc)
-        // We read from the temp path before storage.save might move/delete it (in OSS mode)
         const jsonPath = files.json[0].path;
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
         // 2. Save files to storage (Local or OSS)
-        // Note: storage.save might delete the local file if in OSS mode
         const coverUrl = await storage.save(files.cover[0]);
         const audioUrl = await storage.save(files.audio[0]);
         const jsonFileUrl = await storage.save(files.json[0]);
@@ -88,7 +88,9 @@ app.post('/api/admin/upload', uploadFields, async (req, res) => {
             coverUrl,
             audioUrl,
             jsonUrl: jsonFileUrl,
-            createdAt: new Date().toISOString()
+            createdAt: new Date().toISOString(),
+            category: category || 'directory', // Default to directory
+            series: series || ''
         };
 
         await db.update(({ courses }) => courses.push(newCourse));
@@ -105,13 +107,24 @@ app.get('/api/courses', async (req, res) => {
     await db.read();
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
+    const category = req.query.category; // Filter by category
+
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
 
     const results = {};
 
+    // Filter by category if provided
+    let filteredCourses = [...db.data.courses];
+    if (category) {
+        filteredCourses = filteredCourses.filter(c => {
+            const cCategory = c.category || 'directory'; // Treat missing as directory
+            return cCategory === category;
+        });
+    }
+
     // Sort by createdAt desc
-    const sortedCourses = [...db.data.courses].sort((a, b) =>
+    const sortedCourses = filteredCourses.sort((a, b) =>
         new Date(b.createdAt) - new Date(a.createdAt)
     );
 
@@ -196,6 +209,7 @@ app.put('/api/admin/courses/:id', uploadFields, async (req, res) => {
     try {
         const { id } = req.params;
         const files = req.files || {};
+        const { category, series } = req.body;
 
         await db.read();
         const courseIndex = db.data.courses.findIndex(c => c.id === id);
@@ -203,6 +217,10 @@ app.put('/api/admin/courses/:id', uploadFields, async (req, res) => {
 
         const oldCourse = db.data.courses[courseIndex];
         const updates = { ...oldCourse };
+
+        // Update metadata
+        if (category) updates.category = category;
+        if (series !== undefined) updates.series = series;
 
         // Update files if provided
         if (files.cover) updates.coverUrl = await storage.save(files.cover[0]);
