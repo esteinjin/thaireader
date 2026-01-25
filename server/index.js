@@ -247,14 +247,14 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
             jsonContent = response.data;
         } else {
             // Local file
-            // course.jsonUrl is like /uploads/file.json
-            // We need to map it to absolute path
-            const relativePath = course.jsonUrl.replace('/uploads', '');
-            const localPath = path.join(UPLOADS_DIR, relativePath);
+            // course.jsonUrl is like /uploads/file.json or just file.json
+            const fileName = path.basename(course.jsonUrl);
+            const localPath = path.join(UPLOADS_DIR, fileName);
+
             if (fs.existsSync(localPath)) {
                 jsonContent = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
             } else {
-                return res.status(404).json({ message: 'JSON file not found' });
+                return res.status(404).json({ message: 'JSON file not found at ' + localPath });
             }
         }
 

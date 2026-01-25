@@ -86,13 +86,12 @@ export default function Admin() {
 
     const handleGenerateAudio = async (id) => {
         if (generatingId) return;
-        if (!window.confirm('确定要生成所有单词的语音吗？这可能需要一些时间。')) return;
         setGeneratingId(id);
         try {
             const res = await generateAudio(id);
-            alert(`生成成功！共生成 ${res.updatedCount} 个单词语音。`);
+            console.log(`生成成功！共生成 ${res.updatedCount} 个单词语音。`);
         } catch (err) {
-            alert('生成失败: ' + err.message);
+            console.error('生成失败:', err);
         } finally {
             setGeneratingId(null);
         }
