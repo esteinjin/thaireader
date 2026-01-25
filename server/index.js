@@ -270,7 +270,9 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
                 if (sentence.words) {
                     for (const word of sentence.words) {
                         totalWords++;
-                        if (!word.audioUrl && word.thai) {
+                        // Force check: if audioUrl is missing OR we want to force update (optional logic)
+                        // For now, let's keep the check but maybe the issue is empty strings?
+                        if ((!word.audioUrl || word.audioUrl === "") && word.thai) {
                             attemptedWords++;
                             try {
                                 const audioUrl = await generateSoundOfTextAudio(word.thai);
