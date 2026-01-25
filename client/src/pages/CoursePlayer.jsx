@@ -362,8 +362,8 @@ export default function CoursePlayer() {
                 </div>
 
                 {/* Player Controls */}
-                <div className="flex-none pt-3 border-t border-white/5 bg-black/40 backdrop-blur-md -mx-4 px-4 pb-6 rounded-t-2xl z-20 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
-                    <div className={clsx("flex items-center gap-3 mb-2 transition-opacity", isReadMode ? "opacity-30 pointer-events-none" : "opacity-100")}>
+                <div className="flex-none pt-2 border-t border-white/5 bg-black/40 backdrop-blur-md -mx-4 px-4 pb-4 rounded-t-2xl z-20 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+                    <div className={clsx("flex items-center gap-3 mb-1 transition-opacity", isReadMode ? "opacity-30 pointer-events-none" : "opacity-100")}>
                         <span className="text-[10px] text-white/50 font-mono w-8 text-right">
                             {Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}
                         </span>
@@ -386,15 +386,15 @@ export default function CoursePlayer() {
                         </span>
                     </div>
 
-                    <div className="flex justify-center items-center gap-8">
+                    <div className="flex justify-center items-center gap-6">
                         {isReadMode ? (
-                            <button onClick={prevSentence} className="p-2 text-white/80 hover:text-white transition-colors active:scale-95 flex flex-col items-center gap-1">
-                                <SkipBack size={20} strokeWidth={2} />
-                                <span className="text-[10px] font-medium">上一句</span>
+                            <button onClick={prevSentence} className="p-1.5 text-white/80 hover:text-white transition-colors active:scale-95 flex flex-col items-center gap-0.5">
+                                <SkipBack size={18} strokeWidth={2} />
+                                <span className="text-[9px] font-medium">上一句</span>
                             </button>
                         ) : (
-                            <button onClick={() => jumpTo(Math.max(0, currentTime - 5))} className="p-2 text-white/60 hover:text-white transition-colors active:scale-95">
-                                <SkipBack size={18} strokeWidth={2} />
+                            <button onClick={() => jumpTo(Math.max(0, currentTime - 5))} className="p-1.5 text-white/60 hover:text-white transition-colors active:scale-95">
+                                <SkipBack size={16} strokeWidth={2} />
                             </button>
                         )}
 
@@ -409,23 +409,23 @@ export default function CoursePlayer() {
                                 }
                             }}
                             className={clsx(
-                                "w-12 h-12 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-lg",
+                                "w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-lg",
                                 isReadMode
                                     ? "bg-blue-600 text-white shadow-blue-500/30"
                                     : "bg-white text-slate-950 shadow-white/10"
                             )}
                         >
-                            {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-0.5" />}
+                            {isPlaying ? <Pause size={18} fill="currentColor" /> : <Play size={18} fill="currentColor" className="ml-0.5" />}
                         </button>
 
                         {isReadMode ? (
-                            <button onClick={nextSentence} className="p-2 text-white/80 hover:text-white transition-colors active:scale-95 flex flex-col items-center gap-1">
-                                <SkipForward size={20} strokeWidth={2} />
-                                <span className="text-[10px] font-medium">下一句</span>
+                            <button onClick={nextSentence} className="p-1.5 text-white/80 hover:text-white transition-colors active:scale-95 flex flex-col items-center gap-0.5">
+                                <SkipForward size={18} strokeWidth={2} />
+                                <span className="text-[9px] font-medium">下一句</span>
                             </button>
                         ) : (
-                            <button onClick={() => jumpTo(currentTime + 5)} className="p-2 text-white/60 hover:text-white transition-colors active:scale-95">
-                                <SkipForward size={18} strokeWidth={2} />
+                            <button onClick={() => jumpTo(currentTime + 5)} className="p-1.5 text-white/60 hover:text-white transition-colors active:scale-95">
+                                <SkipForward size={16} strokeWidth={2} />
                             </button>
                         )}
                     </div>
