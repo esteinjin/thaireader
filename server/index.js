@@ -158,7 +158,7 @@ app.get('/api/courses', async (req, res) => {
                     if (s.words) {
                         s.words.forEach(w => {
                             totalWords++;
-                            if (w.audioUrl) hasAudioCount++;
+                            if (w.audioUrl && w.audioUrl.trim() !== "") hasAudioCount++;
                         });
                     }
                 });
