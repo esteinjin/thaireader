@@ -172,6 +172,7 @@ app.put('/api/admin/courses/:id', uploadFields, async (req, res) => {
 
 // Delete Course
 app.delete('/api/admin/courses/:id', async (req, res) => {
+
     try {
         const { id } = req.params;
         await db.read();
@@ -259,37 +260,47 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
         }
 
         let updatedCount = 0;
+        let totalWords = 0;
+        let attemptedWords = 0;
+        const logs = [];
 
         // Iterate sentences and words
         if (jsonContent.sentences) {
             for (const sentence of jsonContent.sentences) {
                 if (sentence.words) {
                     for (const word of sentence.words) {
+                        totalWords++;
                         if (!word.audioUrl && word.thai) {
-                            console.log(`Generating audio for: ${word.thai}`);
-                            const audioUrl = await generateSoundOfTextAudio(word.thai);
-                            if (audioUrl) {
-                                // Download to temp file
-                                const response = await axios.get(audioUrl, { responseType: 'stream' });
-                                const tempFileName = `word-${Date.now()}-${Math.random().toString(36).substring(7)}.mp3`;
-                                const tempFilePath = path.join(UPLOADS_DIR, tempFileName);
-                                const writer = fs.createWriteStream(tempFilePath);
-                                response.data.pipe(writer);
+                            attemptedWords++;
+                            try {
+                                const audioUrl = await generateSoundOfTextAudio(word.thai);
+                                if (audioUrl) {
+                                    // Download to temp file
+                                    const response = await axios.get(audioUrl, { responseType: 'stream' });
+                                    const tempFileName = `word-${Date.now()}-${Math.random().toString(36).substring(7)}.mp3`;
+                                    const tempFilePath = path.join(UPLOADS_DIR, tempFileName);
+                                    const writer = fs.createWriteStream(tempFilePath);
+                                    response.data.pipe(writer);
 
-                                await new Promise((resolve, reject) => {
-                                    writer.on('finish', resolve);
-                                    writer.on('error', reject);
-                                });
+                                    await new Promise((resolve, reject) => {
+                                        writer.on('finish', resolve);
+                                        writer.on('error', reject);
+                                    });
 
-                                // Upload to OSS
-                                const savedUrl = await storage.save({
-                                    filename: tempFileName,
-                                    path: tempFilePath,
-                                    originalname: tempFileName
-                                });
+                                    // Upload to OSS
+                                    const savedUrl = await storage.save({
+                                        filename: tempFileName,
+                                        path: tempFilePath,
+                                        originalname: tempFileName
+                                    });
 
-                                word.audioUrl = savedUrl;
-                                updatedCount++;
+                                    word.audioUrl = savedUrl;
+                                    updatedCount++;
+                                } else {
+                                    logs.push(`Failed to generate audio for: ${word.thai} (API returned null)`);
+                                }
+                            } catch (innerErr) {
+                                logs.push(`Error processing ${word.thai}: ${innerErr.message}`);
                             }
                         }
                     }
@@ -315,7 +326,13 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
             await db.write();
         }
 
-        res.json({ success: true, updatedCount });
+        res.json({
+            success: true,
+            updatedCount,
+            totalWords,
+            attemptedWords,
+            logs
+        });
 
     } catch (error) {
         console.error(error);
