@@ -70,54 +70,36 @@ export default function CoursePlayer() {
             return [...prev, word];
         });
 
-        // Check cache first
-        if (wordAudioCache.current[word.thai]) {
-            new Audio(wordAudioCache.current[word.thai]).play();
-            return;
-        }
-
-        try {
-            // Step 1: Request TTS
-            const res = await axios.post('https://api.soundoftext.com/sounds', {
-                engine: 'Google',
-                data: { text: word.thai, voice: 'th-TH' }
-            });
-
-            if (res.data.success) {
-                const id = res.data.id;
-
-                // Step 2: Poll for result
-                const poll = setInterval(async () => {
-                    try {
-                        const statusRes = await axios.get(`https://api.soundoftext.com/sounds/${id}`);
-                        if (statusRes.data.status === 'Done') {
-                            clearInterval(poll);
-                            const audioUrl = statusRes.data.location;
-                            wordAudioCache.current[word.thai] = audioUrl; // Cache it
-                            new Audio(audioUrl).play();
-                        } else if (statusRes.data.status === 'Error') {
-                            clearInterval(poll);
-                            console.error('SoundOfText Error');
-                        }
-                    } catch (e) {
-                        clearInterval(poll);
-                    }
-                }, 500);
+        // Use pre-generated audioUrl from OSS/Server
+        if (word.audioUrl) {
+            let url = word.audioUrl;
+            // Handle local relative paths if any
+            if (!url.startsWith('http')) {
+                url = `http://localhost:3001${url}`;
             }
-        } catch (err) {
-            console.error('TTS Request Failed', err);
+            new Audio(url).play();
+        } else {
+            console.warn('No audio URL found for word:', word.thai);
         }
     };
 
     const playReview = async () => {
         setIsReviewPlaying(true);
         for (const word of learnedWords) {
-            const audioUrl = wordAudioCache.current[word.thai];
+            let audioUrl = word.audioUrl;
+            if (audioUrl && !audioUrl.startsWith('http')) {
+                audioUrl = `http://localhost:3001${audioUrl}`;
+            }
+
             if (audioUrl) {
                 await new Promise(resolve => {
                     const audio = new Audio(audioUrl);
                     audio.onended = resolve;
-                    audio.play();
+                    audio.onerror = resolve; // Continue even if error
+                    audio.play().catch(e => {
+                        console.error("Audio play failed", e);
+                        resolve();
+                    });
                 });
                 // Small pause between words
                 await new Promise(resolve => setTimeout(resolve, 500));
