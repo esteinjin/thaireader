@@ -14,6 +14,9 @@ export default function CoursePlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
 
+    // Playback Rate State
+    const [playbackRate, setPlaybackRate] = useState(1.0);
+
     // Read Mode State
     const [isReadMode, setIsReadMode] = useState(false);
 
@@ -190,13 +193,14 @@ export default function CoursePlayer() {
     const coverUrl = course.coverUrl ? (course.coverUrl.startsWith('http') ? course.coverUrl : `http://localhost:3001${course.coverUrl}`) : '';
     const audioUrl = course.audioUrl ? (course.audioUrl.startsWith('http') ? course.audioUrl : `http://localhost:3001${course.audioUrl}`) : '';
 
-    // Playback Rate State
-    const [playbackRate, setPlaybackRate] = useState(1.0);
-
     // Update audio playback rate
     useEffect(() => {
         if (audioRef.current) {
-            audioRef.current.playbackRate = playbackRate;
+            try {
+                audioRef.current.playbackRate = playbackRate;
+            } catch (e) {
+                console.warn("Failed to set playback rate:", e);
+            }
         }
     }, [playbackRate]);
 
