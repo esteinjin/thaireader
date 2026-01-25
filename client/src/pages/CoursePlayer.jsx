@@ -52,9 +52,7 @@ export default function CoursePlayer() {
     }, [playbackRate]);
 
     const cyclePlaybackRate = () => {
-        const rates = [1.0, 1.25, 1.5, 0.75];
-        const nextRate = rates[(rates.indexOf(playbackRate) + 1) % rates.length];
-        setPlaybackRate(nextRate);
+        setPlaybackRate(prev => prev === 1.0 ? 0.75 : 1.0);
     };
 
     useEffect(() => {
