@@ -91,6 +91,7 @@ export default function Admin() {
             const res = await generateAudio(id);
             console.log('Generate Audio Response:', res);
             console.log(`生成成功！共生成 ${res.updatedCount} 个单词语音。`);
+            loadCourses(activePage); // Refresh stats
         } catch (err) {
             console.error('生成失败:', err);
         } finally {
@@ -316,11 +317,33 @@ export default function Admin() {
                                         </div>
 
                                         <div className="flex items-center gap-2">
+                                            <div className="flex flex-col items-end mr-2">
+                                                {course.stats && (
+                                                    <>
+                                                        <span className={clsx(
+                                                            "text-xs font-bold px-2 py-0.5 rounded-full mb-1",
+                                                            course.stats.isComplete
+                                                                ? "bg-green-500/20 text-green-400"
+                                                                : "bg-yellow-500/20 text-yellow-400"
+                                                        )}>
+                                                            {course.stats.isComplete ? "语音已就绪" : "语音未完成"}
+                                                        </span>
+                                                        <span className="text-[10px] text-slate-500">
+                                                            {course.stats.hasAudioCount} / {course.stats.totalWords} 词
+                                                        </span>
+                                                    </>
+                                                )}
+                                            </div>
                                             <button
                                                 onClick={() => handleGenerateAudio(course.id)}
-                                                title="生成单词语音"
-                                                disabled={generatingId === course.id}
-                                                className="p-2 bg-white/5 rounded-lg hover:bg-green-500 hover:text-white transition-colors text-slate-400 disabled:opacity-50"
+                                                title={course.stats?.isComplete ? "语音已全部生成" : "生成缺失的单词语音"}
+                                                disabled={generatingId === course.id || (course.stats?.isComplete)}
+                                                className={clsx(
+                                                    "p-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed",
+                                                    course.stats?.isComplete
+                                                        ? "bg-green-500/10 text-green-500"
+                                                        : "bg-white/5 hover:bg-blue-500 hover:text-white text-slate-400"
+                                                )}
                                             >
                                                 {generatingId === course.id ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Volume2 size={18} />}
                                             </button>

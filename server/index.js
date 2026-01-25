@@ -129,7 +129,55 @@ app.get('/api/courses', async (req, res) => {
         };
     }
 
-    results.results = sortedCourses.slice(startIndex, endIndex);
+    // Calculate word stats for each course
+    const coursesWithStats = await Promise.all(sortedCourses.slice(startIndex, endIndex).map(async (course) => {
+        let totalWords = 0;
+        let hasAudioCount = 0;
+
+        try {
+            let jsonContent;
+            if (course.jsonUrl.startsWith('http')) {
+                // For list view, maybe we shouldn't fetch remote JSON for performance?
+                // But user wants status. Let's try to read local file if possible, or skip if remote.
+                // Actually, since we are in admin, we can try to read local file if path matches
+                const fileName = path.basename(course.jsonUrl);
+                const localPath = path.join(UPLOADS_DIR, fileName);
+                if (fs.existsSync(localPath)) {
+                    jsonContent = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+                }
+            } else {
+                const fileName = path.basename(course.jsonUrl);
+                const localPath = path.join(UPLOADS_DIR, fileName);
+                if (fs.existsSync(localPath)) {
+                    jsonContent = JSON.parse(fs.readFileSync(localPath, 'utf-8'));
+                }
+            }
+
+            if (jsonContent && jsonContent.sentences) {
+                jsonContent.sentences.forEach(s => {
+                    if (s.words) {
+                        s.words.forEach(w => {
+                            totalWords++;
+                            if (w.audioUrl) hasAudioCount++;
+                        });
+                    }
+                });
+            }
+        } catch (e) {
+            console.error(`Error reading stats for course ${course.id}:`, e);
+        }
+
+        return {
+            ...course,
+            stats: {
+                totalWords,
+                hasAudioCount,
+                isComplete: totalWords > 0 && totalWords === hasAudioCount
+            }
+        };
+    }));
+
+    results.results = coursesWithStats;
     results.total = sortedCourses.length;
 
     res.json(results);
@@ -270,9 +318,7 @@ app.post('/api/admin/courses/:id/generate-audio', async (req, res) => {
                 if (sentence.words) {
                     for (const word of sentence.words) {
                         totalWords++;
-                        // FORCE GENERATE: Ignore existing audioUrl
-                        console.log(`Checking word: ${word.thai}, current audioUrl: ${word.audioUrl}`);
-                        if (word.thai) {
+                        if (!word.audioUrl && word.thai) {
                             attemptedWords++;
                             try {
                                 const audioUrl = await generateSoundOfTextAudio(word.thai);
