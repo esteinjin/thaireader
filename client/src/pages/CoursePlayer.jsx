@@ -190,6 +190,24 @@ export default function CoursePlayer() {
     const coverUrl = course.coverUrl ? (course.coverUrl.startsWith('http') ? course.coverUrl : `http://localhost:3001${course.coverUrl}`) : '';
     const audioUrl = course.audioUrl ? (course.audioUrl.startsWith('http') ? course.audioUrl : `http://localhost:3001${course.audioUrl}`) : '';
 
+    // Playback Rate State
+    const [playbackRate, setPlaybackRate] = useState(1.0);
+
+    // Update audio playback rate
+    useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.playbackRate = playbackRate;
+        }
+    }, [playbackRate]);
+
+    const cyclePlaybackRate = () => {
+        const rates = [1.0, 1.25, 1.5, 0.75];
+        const nextRate = rates[(rates.indexOf(playbackRate) + 1) % rates.length];
+        setPlaybackRate(nextRate);
+    };
+
+    // ... existing code ...
+
     return (
         <div className="fixed inset-0 bg-slate-950 text-white font-sans overflow-hidden">
             {/* Background Layer */}
@@ -209,21 +227,32 @@ export default function CoursePlayer() {
                     <Link to="/" className="p-2 -ml-2 text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
                         <ChevronLeft size={24} />
                     </Link>
-                    <div className="text-xs font-medium tracking-widest text-white/50 uppercase truncate max-w-[150px]">
+                    <div className="text-xs font-medium tracking-widest text-white/50 uppercase truncate max-w-[100px]">
                         {course.title}
                     </div>
-                    {/* Read Mode Toggle */}
-                    <button
-                        onClick={toggleReadMode}
-                        className={clsx(
-                            "px-3 py-1.5 rounded-full text-xs font-bold transition-all border",
-                            isReadMode
-                                ? "bg-blue-500 text-white border-blue-400 shadow-lg shadow-blue-500/20"
-                                : "bg-white/10 text-slate-400 border-white/5 hover:bg-white/20"
-                        )}
-                    >
-                        {isReadMode ? "📖 点读模式" : "▶️ 播放模式"}
-                    </button>
+
+                    <div className="flex items-center gap-2">
+                        {/* Speed Toggle */}
+                        <button
+                            onClick={cyclePlaybackRate}
+                            className="px-2 py-1.5 rounded-full text-[10px] font-bold bg-white/10 text-slate-300 border border-white/5 hover:bg-white/20 transition-all"
+                        >
+                            {playbackRate}x
+                        </button>
+
+                        {/* Read Mode Toggle */}
+                        <button
+                            onClick={toggleReadMode}
+                            className={clsx(
+                                "px-3 py-1.5 rounded-full text-xs font-bold transition-all border",
+                                isReadMode
+                                    ? "bg-blue-500 text-white border-blue-400 shadow-lg shadow-blue-500/20"
+                                    : "bg-white/10 text-slate-400 border-white/5 hover:bg-white/20"
+                            )}
+                        >
+                            {isReadMode ? "📖 点读" : "▶️ 播放"}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Content Area */}
