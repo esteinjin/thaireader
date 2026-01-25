@@ -89,6 +89,7 @@ export default function Admin() {
         setGeneratingId(id);
         try {
             const res = await generateAudio(id);
+            console.log('Generate Audio Response:', res);
             console.log(`生成成功！共生成 ${res.updatedCount} 个单词语音。`);
         } catch (err) {
             console.error('生成失败:', err);
