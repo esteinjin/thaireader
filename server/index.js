@@ -14,6 +14,9 @@ import axios from 'axios';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
+// Init background audio service
+initAudioService();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
@@ -103,14 +106,7 @@ app.post('/api/admin/upload', uploadFields, async (req, res) => {
     }
 });
 
-import { audioService } from './services/audioService.js';
 
-// Init background service
-initAudioService(); // Call init function we just imported? No, wait, I need to import it properly.
-
-// ... (Wait, I need to update imports first) 
-// I will do separate edits for import and logic to be safe.
-// This edit replaces the OLD Generate API and updates Get Course and Get Courses logic.
 
 // Get All Courses (with pagination)
 app.get('/api/courses', async (req, res) => {
