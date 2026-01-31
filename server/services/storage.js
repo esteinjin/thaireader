@@ -51,6 +51,17 @@ class AliOssStorage {
       if (url.startsWith('http://')) {
         url = url.replace('http://', 'https://');
       }
+
+      // Check for Custom Domain (ESA/CDN)
+      const customDomain = process.env.OSS_CUSTOM_DOMAIN || process.env.VITE_OSS_CUSTOM_DOMAIN;
+      if (customDomain) {
+        // result.url usually looks like: https://bucket.oss-region.aliyuncs.com/filename
+        // We want: https://custom-domain.com/filename
+        const urlObj = new URL(url);
+        urlObj.hostname = customDomain;
+        url = urlObj.toString();
+      }
+
       return url;
     } catch (error) {
       console.error("OSS Upload Error:", error);
