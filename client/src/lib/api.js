@@ -21,3 +21,5 @@ export const updateCourse = (id, formData) => api.put(`/admin/courses/${id}`, fo
     headers: { 'Content-Type': 'multipart/form-data' }
 }).then(res => res.data);
 export const generateAudio = (id) => api.post(`/admin/courses/${id}/generate-audio`).then(res => res.data);
+export const getAudioStatus = () => api.get('/admin/audio-status').then(res => res.data);
+export const triggerAudioGeneration = () => api.post('/admin/audio-trigger').then(res => res.data);

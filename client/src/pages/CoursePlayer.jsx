@@ -250,14 +250,20 @@ export default function CoursePlayer() {
                         {/* Read Mode Toggle */}
                         <button
                             onClick={toggleReadMode}
+                            disabled={course.stats && !course.stats.isComplete}
                             className={clsx(
-                                "px-3 py-1.5 rounded-full text-xs font-bold transition-all border",
+                                "px-3 py-1.5 rounded-full text-xs font-bold transition-all border flex items-center gap-2",
                                 isReadMode
                                     ? "bg-blue-500 text-white border-blue-400 shadow-lg shadow-blue-500/20"
-                                    : "bg-white/10 text-slate-400 border-white/5 hover:bg-white/20"
+                                    : (course.stats && !course.stats.isComplete)
+                                        ? "bg-white/5 text-slate-500 border-white/5 cursor-not-allowed"
+                                        : "bg-white/10 text-slate-400 border-white/5 hover:bg-white/20"
                             )}
                         >
                             {isReadMode ? "📖 点读" : "▶️ 播放"}
+                            {(course.stats && !course.stats.isComplete) && (
+                                <span className="text-[9px] bg-red-500/20 text-red-400 px-1 rounded">语音未就绪</span>
+                            )}
                         </button>
                     </div>
                 </div>
@@ -317,14 +323,25 @@ export default function CoursePlayer() {
 
                             <button
                                 onClick={() => {
+                                    if (course.stats && !course.stats.isComplete) return;
                                     setShowSummary(false);
                                     setIsReadMode(true);
                                     if (audioRef.current) audioRef.current.pause();
                                     setIsPlaying(false);
                                 }}
-                                className="mt-2 text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center justify-center gap-1"
+                                disabled={course.stats && !course.stats.isComplete}
+                                className={clsx(
+                                    "mt-2 text-sm transition-colors flex items-center justify-center gap-1",
+                                    (course.stats && !course.stats.isComplete)
+                                        ? "text-slate-600 cursor-not-allowed"
+                                        : "text-blue-400 hover:text-blue-300"
+                                )}
                             >
-                                <span className="underline underline-offset-4">进入点读模式 (点击句子即可发音)</span>
+                                <span className="underline underline-offset-4">
+                                    {(course.stats && !course.stats.isComplete)
+                                        ? "点读模式不可用 (语音生成中)"
+                                        : "进入点读模式 (点击句子即可发音)"}
+                                </span>
                             </button>
                         </div>
                     ) : (

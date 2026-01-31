@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { login, uploadCourse, getCourses, deleteCourse, updateCourse, generateAudio } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
-import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X, Volume2, BookOpen } from 'lucide-react';
+import { Upload, Lock, FileAudio, FileImage, FileJson, ChevronLeft, List, ChevronRight, LayoutDashboard, LogOut, Trash2, RefreshCw, X, Volume2, BookOpen, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -190,6 +190,18 @@ export default function Admin() {
                         <List size={18} />
                         课程列表
                     </button>
+                    <button
+                        onClick={() => { setActiveTab('audio-tasks'); setEditingCourse(null); }}
+                        className={clsx(
+                            "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium",
+                            activeTab === 'audio-tasks'
+                                ? "bg-blue-600 text-white shadow-lg shadow-blue-900/20"
+                                : "text-slate-400 hover:bg-white/5 hover:text-white"
+                        )}
+                    >
+                        <Volume2 size={18} />
+                        语音任务
+                    </button>
                 </nav>
 
                 <div className="pt-6 border-t border-white/5">
@@ -342,6 +354,10 @@ export default function Admin() {
                         </div>
                     )}
 
+                    {activeTab === 'audio-tasks' && (
+                        <AudioTasksView />
+                    )}
+
                     {activeTab === 'list' && (
                         <div className="bg-slate-900 p-8 rounded-3xl border border-white/5 shadow-2xl flex flex-col animate-fade-in">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
@@ -409,19 +425,6 @@ export default function Admin() {
                                                 )}
                                             </div>
                                             <button
-                                                onClick={() => handleGenerateAudio(course.id)}
-                                                title={course.stats?.isComplete ? "语音已全部生成" : "生成缺失的单词语音"}
-                                                disabled={generatingId === course.id || (course.stats?.isComplete)}
-                                                className={clsx(
-                                                    "p-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed",
-                                                    course.stats?.isComplete
-                                                        ? "bg-green-500/10 text-green-500"
-                                                        : "bg-white/5 hover:bg-blue-500 hover:text-white text-slate-400"
-                                                )}
-                                            >
-                                                {generatingId === course.id ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Volume2 size={18} />}
-                                            </button>
-                                            <button
                                                 onClick={() => handleEdit(course)}
                                                 title="重新上传/更新"
                                                 className="p-2 bg-white/5 rounded-lg hover:bg-orange-500 hover:text-white transition-colors text-slate-400"
@@ -473,5 +476,89 @@ export default function Admin() {
                 </div>
             </div >
         </div >
+    );
+}
+
+function AudioTasksView() {
+    const [status, setStatus] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    const refreshStatus = async () => {
+        try {
+            const data = await import('../lib/api').then(m => m.getAudioStatus());
+            setStatus(data);
+        } catch (e) {
+            console.error(e);
+        }
+    };
+
+    const triggerTask = async () => {
+        setLoading(true);
+        try {
+            await import('../lib/api').then(m => m.triggerAudioGeneration());
+            // Poll for update
+            setTimeout(refreshStatus, 1000);
+        } catch (e) {
+            alert('Trigger failed');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        refreshStatus();
+        const interval = setInterval(refreshStatus, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
+    if (!status) return <div className="text-white text-center py-10">加载中...</div>;
+
+    return (
+        <div className="bg-slate-900 p-8 rounded-3xl border border-white/5 shadow-2xl animate-fade-in max-w-2xl mx-auto">
+            <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center">
+                    <Volume2 className="w-6 h-6 text-teal-400" />
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold text-white">语音补全任务</h2>
+                    <p className="text-slate-400 text-xs">自动检测并生成缺失单词语音 (每日凌晨3点自动运行)</p>
+                </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-white/5 mb-6 text-center">
+                <div className="text-sm text-slate-400 mb-2">当前状态</div>
+                <div className={clsx("text-2xl font-bold mb-2", status.isRunning ? "text-green-400" : "text-slate-200")}>
+                    {status.isRunning ? "正在运行中..." : "待机中"}
+                </div>
+                {status.isRunning && (
+                    <div className="text-xs text-blue-300 animate-pulse">
+                        正在处理: {status.currentProcessingCourse}
+                    </div>
+                )}
+            </div>
+
+            <div className="space-y-4 mb-8">
+                <div className="flex justify-between text-sm py-2 border-b border-white/5">
+                    <span className="text-slate-400">本次已处理单词数</span>
+                    <span className="text-white font-mono">{status.processedCount}</span>
+                </div>
+                <div className="flex justify-between text-sm py-2 border-b border-white/5">
+                    <span className="text-slate-400">最新日志</span>
+                    <span className="text-white font-mono text-xs max-w-[200px] truncate" title={status.lastLog}>{status.lastLog || '-'}</span>
+                </div>
+            </div>
+
+            <button
+                onClick={triggerTask}
+                disabled={status.isRunning || loading}
+                className="w-full py-3 bg-teal-600 hover:bg-teal-500 disabled:bg-slate-700 text-white rounded-xl font-bold transition-all shadow-lg flex items-center justify-center gap-2"
+            >
+                {status.isRunning ? (
+                    <><RefreshCw className="animate-spin" size={18} /> 任务运行中</>
+                ) : (
+                    <><Play size={18} /> 立即开始扫描并生成</>
+                )}
+            </button>
+        </div>
     );
 }
