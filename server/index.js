@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import { storage } from './services/storage.js';
 import { db } from './services/db.js';
 import { audioService, initAudioService } from './services/audioService.js';
+import { migrationService } from './services/migrationService.js';
 import { fileURLToPath } from 'url';
 import axios from 'axios';
 
