@@ -183,12 +183,22 @@ app.post('/api/admin/audio-trigger', (req, res) => {
 // But keeping the specific button logic is also fine. 
 // Actually I'll remove the huge block of code and just say "Triggered" or fail.
 // Wait, the user might still want to click "Generate" on a specific course.
-// I'll leave the OLD generate route BUT update it to use the new service logic if possible?
-// The new service is "process ALL missing". 
-// Let's deprecate the per-course generate button in favor of the global task manager, 
-// OR simpler: The per-course button can just trigger the function for that specific course?
-// For simplicity given the request, I will REMOVE the old complex endpoint 
-// since we now have a global manager.
+// I'll leave theimport { migrationService } from './services/migrationService.js';
+
+// Migration Endpoints
+app.get('/api/admin/migration-status', (req, res) => {
+    res.json(migrationService.getStatus());
+});
+
+app.post('/api/admin/migrate-domains', (req, res) => {
+    if (migrationService.getStatus().isMigrating) {
+        return res.status(400).json({ message: 'Migration already running' });
+    }
+    migrationService.runMigration(); // Async start
+    res.json({ success: true, message: 'Migration started' });
+});
+
+
 
 
 app.listen(PORT, () => {

@@ -559,6 +559,59 @@ function AudioTasksView() {
                     <><Play size={18} /> 立即开始扫描并生成</>
                 )}
             </button>
+
+            <MigrationPanel />
+        </div>
+    );
+}
+
+function MigrationPanel() {
+    const [status, setStatus] = useState({ isMigrating: false, logs: [] });
+    const [loading, setLoading] = useState(false);
+
+    const refresh = async () => {
+        try {
+            const data = await import('../lib/api').then(m => m.getMigrationStatus());
+            setStatus(data);
+        } catch (e) { }
+    };
+
+    const run = async () => {
+        if (!window.confirm('确定要执行全量域名迁移吗？这将会更新所有课程的OSS链接为.env中配置的自定义域名。请确保ESA/CDN配置已生效。')) return;
+        setLoading(true);
+        try {
+            await import('../lib/api').then(m => m.triggerDomainMigration());
+            setTimeout(refresh, 1000);
+        } catch (e) { alert('启动失败'); }
+        setLoading(false);
+    };
+
+    useEffect(() => {
+        refresh();
+        const t = setInterval(refresh, 5000);
+        return () => clearInterval(t);
+    }, []);
+
+    return (
+        <div className="mt-8 pt-6 border-t border-white/5">
+            <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-indigo-500/10 rounded-lg flex items-center justify-center">
+                    <RefreshCw className="w-4 h-4 text-indigo-400" />
+                </div>
+                <h3 className="text-sm font-bold text-slate-300">OSS 域名迁移 (ESA加速)</h3>
+            </div>
+
+            <div className="bg-black/20 rounded-lg p-3 text-xs text-slate-500 font-mono mb-4 h-24 overflow-y-auto">
+                {status.logs.length === 0 ? '等待操作...' : status.logs.map((l, i) => <div key={i}>{l}</div>)}
+            </div>
+
+            <button
+                onClick={run}
+                disabled={status.isMigrating || loading}
+                className="w-full py-2 bg-indigo-900/40 hover:bg-indigo-900/60 text-indigo-300 border border-indigo-500/30 rounded-lg text-sm font-medium transition-colors"
+            >
+                {status.isMigrating ? '正在迁移...' : '执行全量域名替换'}
+            </button>
         </div>
     );
 }
