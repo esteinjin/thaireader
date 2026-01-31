@@ -152,7 +152,68 @@ app.get('/api/courses', async (req, res) => {
     res.json(results);
 });
 
-// ... [Skipping upload/update routes which are fine] ...
+// Update Course
+app.put('/api/admin/courses/:id', uploadFields, async (req, res) => {
+    try {
+        const { id } = req.params;
+        const files = req.files || {};
+        const { category, series } = req.body;
+
+        // Pre-process files if necessary (Async operations)
+        let updates = {};
+        if (files.cover && files.cover[0]) {
+            updates.coverUrl = await storage.save(files.cover[0]);
+        }
+        if (files.audio && files.audio[0]) {
+            updates.audioUrl = await storage.save(files.audio[0]);
+        }
+        if (files.json && files.json[0]) {
+            updates.jsonUrl = await storage.save(files.json[0]);
+            try {
+                const jsonPath = files.json[0].path;
+                const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+                if (jsonContent.title) updates.title = jsonContent.title;
+                if (jsonContent.description) updates.description = jsonContent.description;
+            } catch (e) {
+                console.error('Error parsing JSON update', e);
+            }
+        }
+
+        let found = false;
+        await db.update(({ courses }) => {
+            const course = courses.find(c => c.id === id);
+            if (!course) return;
+
+            found = true;
+            if (category) course.category = category;
+            if (series !== undefined) course.series = series;
+
+            Object.assign(course, updates);
+        });
+
+        if (!found) return res.status(404).json({ message: 'Course not found' });
+
+        const updatedCourse = db.data.courses.find(c => c.id === id);
+        res.json({ success: true, course: updatedCourse });
+    } catch (error) {
+        console.error('Update failed:', error);
+        res.status(500).json({ message: 'Update failed', error: error.message });
+    }
+});
+
+// Delete Course
+app.delete('/api/admin/courses/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await db.update(({ courses }) => {
+            const idx = courses.findIndex(c => c.id === id);
+            if (idx !== -1) courses.splice(idx, 1);
+        });
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ message: 'Delete failed', error: error.message });
+    }
+});
 
 // Get Course Detail (Updated with Stats)
 app.get('/api/courses/:id', async (req, res) => {
