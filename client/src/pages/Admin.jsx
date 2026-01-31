@@ -21,7 +21,9 @@ export default function Admin() {
     const [courses, setCourses] = useState([]);
     const [page, setPage] = useState(1);
     const [total, setTotal] = useState(0);
+    const [categoryFilter, setCategoryFilter] = useState(''); // '' | 'directory' | 'novel' | 'drama'
     const limit = 8;
+
 
     const navigate = useNavigate();
 
@@ -39,7 +41,7 @@ export default function Admin() {
 
     const loadCourses = async (pageNum) => {
         try {
-            const data = await getCourses(pageNum, limit);
+            const data = await getCourses(pageNum, limit, categoryFilter);
             setCourses(data.results);
             setTotal(data.total);
         } catch (err) {
@@ -51,7 +53,7 @@ export default function Admin() {
         if (isAuthenticated && activeTab === 'list') {
             loadCourses(page);
         }
-    }, [isAuthenticated, activeTab, page]);
+    }, [isAuthenticated, activeTab, page, categoryFilter]);
 
     const handleUpload = async (e) => {
         e.preventDefault();
@@ -342,13 +344,37 @@ export default function Admin() {
 
                     {activeTab === 'list' && (
                         <div className="bg-slate-900 p-8 rounded-3xl border border-white/5 shadow-2xl flex flex-col animate-fade-in">
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
-                                    <List className="w-6 h-6 text-purple-400" />
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                                        <List className="w-6 h-6 text-purple-400" />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-xl font-bold text-white">课程列表</h2>
+                                        <p className="text-slate-400 text-xs">共 {total} 个课程</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h2 className="text-xl font-bold text-white">课程列表</h2>
-                                    <p className="text-slate-400 text-xs">共 {total} 个课程</p>
+
+                                <div className="flex bg-slate-800 p-1 rounded-lg">
+                                    {[
+                                        { id: '', label: '全部' },
+                                        { id: 'directory', label: '名录' },
+                                        { id: 'novel', label: '小说' },
+                                        { id: 'drama', label: '对白' }
+                                    ].map(tab => (
+                                        <button
+                                            key={tab.id}
+                                            onClick={() => { setCategoryFilter(tab.id); setPage(1); }}
+                                            className={clsx(
+                                                "px-3 py-1.5 text-xs font-bold rounded-md transition-all",
+                                                categoryFilter === tab.id
+                                                    ? "bg-slate-600 text-white shadow-sm"
+                                                    : "text-slate-400 hover:text-white"
+                                            )}
+                                        >
+                                            {tab.label}
+                                        </button>
+                                    ))}
                                 </div>
                             </div>
 

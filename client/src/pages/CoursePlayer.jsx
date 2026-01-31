@@ -314,6 +314,18 @@ export default function CoursePlayer() {
                             >
                                 重新开始课程
                             </button>
+
+                            <button
+                                onClick={() => {
+                                    setShowSummary(false);
+                                    setIsReadMode(true);
+                                    if (audioRef.current) audioRef.current.pause();
+                                    setIsPlaying(false);
+                                }}
+                                className="mt-2 text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center justify-center gap-1"
+                            >
+                                <span className="underline underline-offset-4">进入点读模式 (点击句子即可发音)</span>
+                            </button>
                         </div>
                     ) : (
                         <>
